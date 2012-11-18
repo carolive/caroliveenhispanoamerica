@@ -16,3 +16,12 @@ div.block#encouragment {
 #project #pres_text {
   padding: 5px;
 }
+
+#encouragment #courage_carousel p {
+  margin: 0;
+}
+
+#encouragment #courage_carousel p.courage_sign {
+  font-style: italic;
+  color: grey;
+}

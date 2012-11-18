@@ -1,0 +1,18 @@
+div.block#project {
+	margin-bottom: 10px;
+  height: 433px;
+}
+
+div.block#encouragment {
+	margin-top: 10px;
+  height: 153px;
+}
+
+#project #pres_picture {
+  float: left;
+  padding: 5px;
+}
+
+#project #pres_text {
+  padding: 5px;
+}

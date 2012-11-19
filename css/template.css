@@ -21,8 +21,8 @@ header ul.menu li.universe ul {
   padding: 0;
 }
 
-div.row_300 {
-  height : 300px;
+div.row_250 {
+  height : 250px;
 }
 
 div.row_600 {
@@ -53,8 +53,8 @@ div.block {
 	border-radius: 5px;
 }
 
-div.row_300 div.block {
-  height: 298px;
+div.row_250 div.block {
+  height: 248px;
 }
 
 div.row_600 div.block {

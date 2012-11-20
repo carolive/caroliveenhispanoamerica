@@ -8,13 +8,16 @@ div.block#encouragment {
   height: 153px;
 }
 
-#project #pres_picture {
-  float: left;
+#project .block_content {
   padding: 5px;
 }
 
-#project #pres_text {
-  padding: 5px;
+#project #pres_picture {
+  float: left;
+}
+
+#project #pres_text p {
+  margin : 0 0 10px 0;
 }
 
 #encouragment #courage_carousel p {
@@ -53,4 +56,31 @@ div.block#encouragment {
 
 #caroliveposts .post_content ul li p.post_text {
   margin-bottom: 10px;
+}
+
+#news .block_content {
+  padding: 5px;
+}
+
+#news ul {
+  list-style: none outside none;
+  margin: 0;
+  padding: 0;
+}
+
+#news ul li {
+  margin: 10px 0 0 0;
+}
+
+#news ul  li:first-child {
+  margin-top: 0;
+}
+
+#news ul p {
+  margin: 0;
+}
+
+#news ul p.news_country {
+  font-style: italic;
+  color: grey;
 }

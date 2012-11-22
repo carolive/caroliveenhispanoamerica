@@ -84,3 +84,18 @@ div.block#encouragment {
   font-style: italic;
   color: grey;
 }
+
+#photos ul {
+  list-style: none outside none;
+  margin: 0;
+  padding: 0;
+}
+
+#photos ul li {
+  position: absolute;
+}
+
+#photos ul li img{
+  height: 260px;
+  width: 320px;
+}

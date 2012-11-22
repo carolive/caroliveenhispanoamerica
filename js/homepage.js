@@ -7,12 +7,15 @@ $(document).ready(function(){
 });
 
 $(document).ready(function(){
-  while(true) {
+  window.setInterval(function() {
     var nbElements = $("#photos ul li").length;
-    var photoToDisplayId = 'photo_' + Math.floor((Math.random()*nbElements)+1);
-	$("#photos ul li").effect({
-	  easing: "easeOutBounce"
-	}).delay(5000);
-	$(photoToDisplayId).show();
-  }
+    var photoToDisplay = Math.floor((Math.random()*nbElements)+1);
+	  /*$("#photos ul li").effect({
+	    easing: "easeOutBounce"
+	  })*/
+    $("#photos ul li").fadeOut();
+	  $("#photo_" + photoToDisplay).fadeIn().effect({
+	    easing: "easeOutBounce"
+	  });
+  }, 5000);
 });

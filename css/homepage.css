@@ -1,11 +1,13 @@
 div.block#project {
 	margin-bottom: 10px;
-  height: 433px;
+ /* height: 433px; Laisse le texte se dérouler de lui même*/
 }
 
 div.block#encouragment {
 	margin-top: 10px;
-  height: 153px;
+  height: 220px;
+/*Ajout de l'overflow pour qu'il tienne dans le flux*/
+	overflow:hidden;
 }
 
 #project .block_content {
@@ -20,6 +22,15 @@ div.block#encouragment {
   margin : 0 0 10px 0;
 }
 
+/*** ENCOURAGEMENTS ***/
+#encouragment #courage_carousel li {
+	border:1px solid #e3e3e3;
+	background-image: linear-gradient(bottom, #F0F0F0 0%, #FAFAFA 100%);
+	background-image: -o-linear-gradient(bottom, #F0F0F0 0%, #FAFAFA 100%);
+	background-image: -moz-linear-gradient(bottom, #F0F0F0 0%, #FAFAFA 100%);
+	background-image: -webkit-linear-gradient(bottom, #F0F0F0 0%, #FAFAFA 100%);
+	background-image: -ms-linear-gradient(bottom, #F0F0F0 0%, #FAFAFA 100%);
+}
 #encouragment #courage_carousel p {
   margin: 0;
 }
@@ -27,7 +38,10 @@ div.block#encouragment {
 #encouragment #courage_carousel p.courage_sign {
   font-style: italic;
   color: grey;
+
 }
+/*** end ENCOURAGEMENTS ***/
+
 
 #caroliveposts #post_caro, #caroliveposts #post_olive {
   padding: 5px;
@@ -58,10 +72,46 @@ div.block#encouragment {
   margin-bottom: 10px;
 }
 
+/**** DERNIERS ATICLES PARUS ****/
+#news { 
+	background:#f5f5f5;
+	height:300px;
+	box-shadow: 0px 0px 3px #AAA inset;	
+}
+#news .block_title {
+  display:none;
+}
 #news .block_content {
   padding: 5px;
+  position:absolute;
+}
+#news img {max-height:290px;}
+
+#news .extract {
+	background: rgba(0, 0, 0, 0.5);
+	position:absolute;
+	bottom:8px;
+	right:5px;
+	padding:5px;
+	width:480px;
+}
+#news ul p {
+	color:#FFF;
+	font-size:11px;
 }
 
+#news ul p.news_country {
+  font-weight: bold;
+	text-transform:uppercase;
+	color:#FFF;
+	font-size:14px;
+}
+#news ul a.news_link {
+  font-style:italic;
+	font-weight:bold;
+	text-decoration:none;
+}
+/*
 #news ul {
   list-style: none outside none;
   margin: 0;
@@ -80,10 +130,7 @@ div.block#encouragment {
   margin: 0;
 }
 
-#news ul p.news_country {
-  font-style: italic;
-  color: grey;
-}
+/**** end DERNIERS ATICLES PARUS ****/
 
 #photos ul {
   list-style: none outside none;
@@ -92,10 +139,13 @@ div.block#encouragment {
 }
 
 #photos ul li {
-  position: absolute;
+ /* position: absolute;*/ /* je l'ai enlevé car il n'entrait pas dans son conteneur */
 }
 
 #photos ul li img{
+/* Je les fait un peu plus petites
   height: 260px;
-  width: 320px;
+  width: 320px;*/
+	width:260px;
+	height:150px;
 }

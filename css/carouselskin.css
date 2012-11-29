@@ -3,7 +3,7 @@
 }
 
 .jcarousel-skin-carolive .jcarousel-container-horizontal {
-    width: 572px;
+   /* width: 572px; */ je le cache pour le moment*/
     padding: 10px 40px;
 }
 
@@ -11,14 +11,14 @@
     overflow: hidden;
 }
 
-.jcarousel-skin-carolive .jcarousel-clip-horizontal {
-    width:  572px;
-    height: 85px;
+.jcarousel-skin-carolive .jcarousel-clip-horizontal {/* changement de la taille du carrousel */
+    width:  570px;
+    height: 200px;
 }
 
 .jcarousel-skin-carolive .jcarousel-item {
-    width: 180px;
-    height: 85px;
+    width: 140px;
+    height: 180px;
 }
 
 .jcarousel-skin-carolive .jcarousel-item-horizontal {
@@ -39,9 +39,9 @@
 /**
  *  Horizontal Buttons
  */
-.jcarousel-skin-carolive .jcarousel-next-horizontal {
+.jcarousel-skin-carolive .jcarousel-next-horizontal { /*Réglage de la hauteur de la flèche */
     position: absolute;
-    top: 43px;
+    top: 75px;
     right: 5px;
     width: 32px;
     height: 32px;
@@ -72,9 +72,9 @@
     background-position: -96px 0;
 }
 
-.jcarousel-skin-carolive .jcarousel-prev-horizontal {
+.jcarousel-skin-carolive .jcarousel-prev-horizontal { /* Réglage de la hauteur des flèches */
     position: absolute;
-    top: 43px;
+    top: 75px;
     left: 5px;
     width: 32px;
     height: 32px;

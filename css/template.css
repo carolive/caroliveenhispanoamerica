@@ -74,14 +74,14 @@ h1 span, h2 span { /*met le premier mot en rouge*/
 /*** HEADER ***/
 header {
 	background:#eee url(../images/header_bg.jpg) repeat-x;
-	height:190px;
 }
 header h1 {
-	background:url(../images/logo.jpg) no-repeat;
+	background:url(../images/logo.png) no-repeat;
 	margin:0 auto;
-	width:178px;
+	width:186px;
 	height:202px;
 }
+header  h1 span {display:none;}
 .header_ctnr, .menu { /*centrage du header & du menu */
 	width: 960px;
   margin: 0 auto;
@@ -110,7 +110,7 @@ nav{
 	-o-box-shadow: 0px -2px 10px 0px #9b9b9b;
 	box-shadow: 0px -2px 10px 0px #9b9b9b;
 	filter:progid:DXImageTransform.Microsoft.Shadow(color=#9b9b9b, Direction=90, Strength=10);
-	margin:0;
+	margin:-12px 0 0 0;
 	padding:0;
 	height:40px;
 	border-top:1px solid #f55151;

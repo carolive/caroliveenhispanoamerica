@@ -187,6 +187,10 @@ div.right_column {
 	background-color:#f5f5f5;
 	box-shadow: 0px 0px 3px #AAA;
 }
+div.right_column div.block {
+	background:white;
+	margin:5px;
+}
 /*
 div.row_300 div.block {
   height: 298px;

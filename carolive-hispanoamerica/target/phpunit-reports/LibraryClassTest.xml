@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="LibraryClassTest" file="C:\Users\Caroline\amlat\caroliveenhispanoamerica\carolive-hispanoamerica\src\test\php\org\phpmaven\library\LibraryClassTest.php" tests="1" assertions="0" failures="0" errors="0" time="0.011098">
+    <testcase name="testMe" class="LibraryClassTest" file="C:\Users\Caroline\amlat\caroliveenhispanoamerica\carolive-hispanoamerica\src\test\php\org\phpmaven\library\LibraryClassTest.php" line="10" assertions="0" time="0.011098"/>
+  </testsuite>
+</testsuites>

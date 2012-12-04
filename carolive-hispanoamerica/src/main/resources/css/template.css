@@ -135,6 +135,10 @@ nav li.universe a {
 
 div.bodysite {
   background:#E9E9E9; /* ajout de la couleur de fond du body*/
+	-moz-box-shadow: -0 5px 8px -3px #9b9b9b inset;
+	-webkit-box-shadow: 0 5px 8px -3px #9b9b9b inset;
+	-o-box-shadow: 0 5px 8px -3px #9b9b9b inset;
+	box-shadow: 0 5px 8px -3px #9b9b9b inset;
 }
 .main {/* pour que le gris prenne toute la largeur, c'est le main qu'on centre*/
 	width: 960px;

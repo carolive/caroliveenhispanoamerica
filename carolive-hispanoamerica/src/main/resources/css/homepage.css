@@ -44,12 +44,14 @@ div.block#encouragment {
 
 /*** POSTS ***/
 #caroliveposts #post_caro, #caroliveposts #post_olive {
-  padding: 5px;
+  padding: 10px 0;
+	overflow:hidden;
+	max-height:62px;
 }
 
 #caroliveposts .post_picture {
   float: left;
-  margin-right: 10px;
+  margin-right: 5px;
 }
 #caroliveposts img {
 	border:1px solid #e3e3e3;
@@ -65,7 +67,7 @@ div.block#encouragment {
 #caroliveposts .post_content ul {
   list-style: none outside none;
   margin: 0;
-  padding: 0;
+  padding: 0 10px;
 }
 
 #caroliveposts .post_content li {
@@ -78,13 +80,18 @@ div.block#encouragment {
 
 #caroliveposts .post_content ul li p.post_date {
   font-style: italic;
-  color: grey;
+  color: #CCC;
   font-size:11px;
 }
-
-#caroliveposts .post_content ul li p.post_text {
-  margin-bottom: 10px;
+#caroliveposts .seemore {
+	padding:10px;
+	text-align:center;
+	font-style:italic;
 }
+#caroliveposts .seemore a {
+	text-decoration:none;
+}
+
 /*** end POSTS ***/
 
 /**** DERNIERS ATICLES PARUS ****/

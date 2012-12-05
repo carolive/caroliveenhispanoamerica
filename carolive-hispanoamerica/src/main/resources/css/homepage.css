@@ -5,9 +5,7 @@ div.block#project {
 
 div.block#encouragment {
 	margin-top: 10px;
-  height: 220px;
-/*Ajout de l'overflow pour qu'il tienne dans le flux*/
-	overflow:hidden;
+
 }
 
 #project .block_content {
@@ -30,16 +28,32 @@ div.block#encouragment {
 	background-image: -moz-linear-gradient(bottom, #F0F0F0 0%, #FAFAFA 100%);
 	background-image: -webkit-linear-gradient(bottom, #F0F0F0 0%, #FAFAFA 100%);
 	background-image: -ms-linear-gradient(bottom, #F0F0F0 0%, #FAFAFA 100%);
+	height:180px;
+	width:170px;
 }
+#encouragment #courage_carousel li div {
+	background:url(../images/encourage_bg.png) no-repeat;
+}
+
 #encouragment #courage_carousel p {
   margin: 0;
+	text-align:center;
+	line-height:1.8em;
+	padding:10px 10px 0;
+	max-height:120px;
+	overflow:hidden;
+	-o-text-overflow: ellipsis; /* pour Opera 9 */
+  text-overflow: ellipsis;
+}
+#encouragment #courage_carousel p.courage_sign:before {
+	content:"- ";
 }
 
 #encouragment #courage_carousel p.courage_sign {
   font-style: italic;
   color: grey;
-
 }
+
 /*** end ENCOURAGEMENTS ***/
 
 /*** POSTS ***/

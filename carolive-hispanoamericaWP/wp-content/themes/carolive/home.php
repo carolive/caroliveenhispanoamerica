@@ -1,10 +1,12 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 
   <?php include 'head_elements.php'; ?>
 
-<body>
-  <?php get_header(); ?>
+<body class="no-customize-support">
+<?php wp_customize_support_script(); ?>
+
+<?php get_header(); ?>
   
   <div class="bodysite">
     <div class="container main"> <!-- container : la grille -->

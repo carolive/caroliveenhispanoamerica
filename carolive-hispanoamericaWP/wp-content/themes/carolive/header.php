@@ -1,4 +1,4 @@
-﻿<header> <!-- j'ai enleve le header du "bodysite" afin qu'il prenne toute la largeur-->
+<header> <!-- j'ai enleve le header du "bodysite" afin qu'il prenne toute la largeur-->
   <div class="banner header_ctnr"> <!-- ajout de la classe header_ctnr que le header soit centre avec le reste de la page -->
     <a href="homepage.html"><h1 id="ceh" name="ceh"><span>Carolive en HispanoAmerica</span></h1></a>
   </div>

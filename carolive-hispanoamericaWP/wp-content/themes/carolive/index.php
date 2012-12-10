@@ -1,1 +1,1 @@
-﻿<?php include 'home.php'; ?>
+<?php include 'home.php'; ?>

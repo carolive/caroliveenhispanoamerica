@@ -1,35 +1,37 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="fr">
-<head profile="http://gmpg.org/xfn/11">
- 
-	<title>Carolive en HispanoAmerica<?php if ( is_404() ) : ?> &raquo; <?php _e('Not Found') ?><?php endif ?></title>
- 
-	<meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
-	<meta name="generator" content="WordPress <?php bloginfo('version'); ?>" />
-	
-  <!-- leave this for stats -->
-  <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
-  <link rel="stylesheet" href="css/template.css" media="all" type="text/css" />
-  <link rel="stylesheet" href="css/homepage.css" media="all" type="text/css" />
-  <link rel="stylesheet" href="css/carouselskin.css" media="all" type="text/css" />
-  <link rel="stylesheet" href="css/grid.css" media="all" type="text/css" /> <!-- CSS qui gere la grille pour placer les elements -->
-  
-  <script src="http://code.jquery.com/jquery-1.8.2.js"></script>
-  <script src="http://code.jquery.com/ui/1.9.1/jquery-ui.js"></script>
-  <script type="text/javascript" src="js/header.js"></script>
-	
-  <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="<?php bloginfo('rss2_url'); ?>" />
-	<link rel="alternate" type="text/xml" title="RSS .92" href="<?php bloginfo('rss_url'); ?>" />
-	<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="<?php bloginfo('atom_url'); ?>" />
-	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" /><?php wp_head(); ?>
- 
-	<?php wp_get_archives('type=monthly&format=link'); ?>
-	<?php //comments_popup_script(); // off by default ?>
-	<?php wp_head(); ?>
- 
-</head>
+
+  <?php include 'head_elements.php'; ?>
+
 <body>
   <?php get_header(); ?>
+  
+  <div class="bodysite">
+    <div class="container main"> <!-- container : la grille -->
+      
+      <div class="span-16 left_column">
+        <div id="project" class="block">
+          <div class="block_title">
+            <h2><span>Presentation</span> du projet</h2>
+          </div>
+          <div class="block_content">
+	  		    <div id="pres_text">
+              <p>C'est parti, on ne peut plus reculer ! Voilà bientôt 5 ans que nous prévoyons de partir à l'aventure, 1 an à l'autre bout de monde, et ça y est, ça se concrétise enfin.</p>
+              <p>Nous partons donc 11 mois en Amérique du Sud pour aller à la rencontre d'une autre culture, d'un autre univers, et d'essayer d'en voir différentes facettes. Nous allons faire du volontariat écologique et/ou social, du wwoofing et peut-être travailler un peu sur place.</p>
+              <p>Nous prenons notre envol le 19 février prochain, avec pour 1ère destination le Costa Rica. Là-bas, nous allons travailler pendant 2 mois avec l'association Tortugas de Pacuare, qui s'occupe de la sauvegarde des tortues marines.</p>
+              <p>Ensuite nous nous rendrons au Pérou, en Equateur, en Bolivie, au Chili, en Patagonie et en Argentine. ça, c'est ce qui est prévu, mais l'aventure étant par définition "changeante, on verra bien ce qui se passera !</p>
+              <p>Tout au long de notre voyage, nous serons en relation avec les enfants de l'association L'enfant@l'hopital, qui s'occupe de mettre en relation des voyageurs avec des enfant malades ou dans des quartiers défavoriser.</p>
+	  	      </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="span-8 last right_column">
+      </div>
+    
+    </div>
+  </div>    
+  
   <?php get_footer(); ?>
 </body>
 </html>

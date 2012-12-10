@@ -1,6 +1,5 @@
-<header> <!-- j'ai enleve le header du "bodysite" afin qu'il prenne toute la largeur-->
+ï»¿<header> <!-- j'ai enleve le header du "bodysite" afin qu'il prenne toute la largeur-->
   <div class="banner header_ctnr"> <!-- ajout de la classe header_ctnr que le header soit centre avec le reste de la page -->
-    <!--<img src="../carolive-hispanoamerica/src/main/resources/images/volcan.jpg" alt="Volcan de Bolivie (je crois)" />-->
     <a href="homepage.html"><h1 name="ceh"><span>Carolive en HispanoAmerica</span></h1></a>
   </div>
 </header>
@@ -10,7 +9,7 @@
 			<span>Home</span>
 		</li>
 		<li class="universe">
-			<a href="getready.html">Préparatif</a>
+			<a href="getready.html">PrÃ©paratif</a>
 			<ul>
 				<li>
 					<a href="budget.html">Budget</a>
@@ -36,7 +35,7 @@
 					<a href="costarica.html">Costa Rica</a>
 				</li>
 				<li>
-					<a href="peru.html">Pérou</a>
+					<a href="peru.html">PÃ©rou</a>
 				</li>
 				<li>
 					<a href="equator.html">Equateur</a>

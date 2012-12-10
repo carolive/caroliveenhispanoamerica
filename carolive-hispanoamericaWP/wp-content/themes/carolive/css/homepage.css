@@ -1,19 +1,13 @@
 div.block#project {
 	margin-bottom: 10px;
- /* height: 433px; Laisse le texte se dérouler de lui même*/
 }
 
 div.block#encouragment {
 	margin-top: 10px;
-
 }
 
 #project .block_content {
   padding: 5px;
-}
-
-#project #pres_picture {
-  float: left;
 }
 
 #project #pres_text p {

@@ -123,7 +123,7 @@ nav li.universe {
 	font-family: Play, Verdana, sans-serif;
 	color:#FFF;
 	font-size:16px;
-	margin:12px 40px;
+	margin:12px 30px;
 	position: relative;
   float: left;
 }
@@ -146,35 +146,6 @@ div.bodysite {
 	padding: 20px 0;
 }
 
-/* A ENLEVER 
-1) j'ai redéfini ça avec le système de grille
-div.row_300 {
-  height : 300px;
-}
-
-div.row_600 {
-  height : 600px;
-}
-
-[class*="panel_"] {
-  float: left;
-  height: 100%;
-  overflow: hidden;
-  margin:5px;
-}
-2) A voir
-div.panel_1_1 {
-  width: 986px;
-}
-
-div.panel_1_3 {
-  width: 322px;
-}
-
-div.panel_2_3 {
-  width: 654px;
-}
-*/
 div.block {
 	background:white;
 	margin:30px;
@@ -195,14 +166,6 @@ div.right_column div.block {
 	background:white;
 	margin:5px;
 }
-/*
-div.row_300 div.block {
-  height: 298px;
-}
-
-div.row_600 div.block {
-  height: 598px;
-}*/
 
 div.block_title {
 	background-image: -moz-linear-gradient(center top , #F8F8F8 50%, #DFDFDF 100%);

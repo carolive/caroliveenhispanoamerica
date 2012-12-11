@@ -89,17 +89,7 @@ header  h1 span {display:none;}
 /*** end HEADER ***/
 
 /*** NAV ***/
-nav ul {
-  list-style: none outside none;
-}
-nav ul.menu li.universe ul {
-  position: absolute;
-  display: none;
-  margin: 0;
-  padding: 0;
-}
 nav{
-	overflow:hidden;/* permet aux menu d'être réellement dans le header */
 	background-image: linear-gradient(bottom, #992222 0%, #c42b2b 100%);
 	background-image: -o-linear-gradient(bottom, #992222 0%, #c42b2b 100%);
 	background-image: -moz-linear-gradient(bottom, #992222 0%, #c42b2b 100%);
@@ -116,6 +106,9 @@ nav{
 	border-top:1px solid #f55151;
 	bottom:0;
 } 
+nav ul {
+  list-style: none outside none;
+}
 nav li.universe {
 	list-style:none;
 	display:inline;
@@ -123,13 +116,40 @@ nav li.universe {
 	font-family: Play, Verdana, sans-serif;
 	color:#FFF;
 	font-size:16px;
-	margin:12px 30px;
+	padding:0 10px 12px 10px;
+	margin:12px 20px 0 20px;
 	position: relative;
   float: left;
 }
 nav li.universe a {
 	color:#FFF;
 	text-decoration:none;
+}
+nav li.universe ul {
+  position: absolute;
+  display: none;
+  margin: 0;
+  padding: 0;
+  width: 160px;
+  top: 28px;
+  z-index: 1;
+}
+nav li.universe ul li {
+  padding: 6px;
+  margin-top: 2px;
+	background-image: linear-gradient(bottom, #992222 0%, #c42b2b 100%);
+	background-image: -o-linear-gradient(bottom, #992222 0%, #c42b2b 100%);
+	background-image: -moz-linear-gradient(bottom, #992222 0%, #c42b2b 100%);
+	background-image: -webkit-linear-gradient(bottom, #992222 0%, #c42b2b 100%);
+	background-image: -ms-linear-gradient(bottom, #992222 0%, #c42b2b 100%);
+	-moz-box-shadow: 0px -2px 10px 0px #9b9b9b;
+	-webkit-box-shadow: 0px -2px 10px 0px #9b9b9b;
+	-o-box-shadow: 0px -2px 10px 0px #9b9b9b;
+	box-shadow: 0px -2px 10px 0px #9b9b9b;
+	filter:progid:DXImageTransform.Microsoft.Shadow(color=#9b9b9b, Direction=90, Strength=10);
+}
+nav li.universe ul li a {
+  font-size: 14px;
 }
 /*** end NAV ***/
 

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 
-  <?php include 'head_elements.php'; ?>
+  <?php include 'head-commons.php'; ?>
 
 <body class="no-customize-support">
 <?php wp_customize_support_script(); ?>

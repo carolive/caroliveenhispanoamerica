@@ -6,7 +6,7 @@
 <nav>
 	<ul class="menu">
 		<li class="universe">
-			<span>Home</span>
+			<a href="<?php bloginfo('url'); ?>">Home</a>
 		</li>
 		<li class="universe">
 			<a href="getready.html">Préparatif</a>

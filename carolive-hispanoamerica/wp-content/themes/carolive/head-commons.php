@@ -6,7 +6,6 @@
 <!-- leave this for stats -->
 <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
 <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/template.css" media="screen" type="text/css" />
-<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/homepage.css" media="screen" type="text/css" />
 <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/grid.css" media="screen" type="text/css" />
 
 <script src="http://code.jquery.com/jquery-1.8.2.js"></script>

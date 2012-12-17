@@ -212,6 +212,17 @@ div.block_title h2 {
   margin: 0;
 }
 
+/*** Pagination ***/
+.pagination {
+	padding:10px;
+	text-align:center;
+	font-style:italic;
+}
+.pagination a {
+	text-decoration:none;
+}
+/*** FIn de la pagination ***/
+
 /*** FOOTER ***/
 footer {
 	background-image: linear-gradient(bottom, #992222 0%, #c42b2b 100%);

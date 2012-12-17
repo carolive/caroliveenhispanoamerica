@@ -1,0 +1,48 @@
+#caroliveposts .post_user {
+  padding: 10px 0;
+	overflow:hidden;
+	max-height:62px;
+}
+
+#caroliveposts .post_picture {
+  float: left;
+  margin-right: 5px;
+}
+#caroliveposts img {
+	border:1px solid #e3e3e3;
+	background-image: linear-gradient(bottom, #F0F0F0 0%, #FAFAFA 100%);
+	background-image: -o-linear-gradient(bottom, #F0F0F0 0%, #FAFAFA 100%);
+	background-image: -moz-linear-gradient(bottom, #F0F0F0 0%, #FAFAFA 100%);
+	background-image: -webkit-linear-gradient(bottom, #F0F0F0 0%, #FAFAFA 100%);
+	background-image: -ms-linear-gradient(bottom, #F0F0F0 0%, #FAFAFA 100%);
+	padding:3px;
+	float:right;
+}
+
+#caroliveposts .post_content ul {
+  list-style: none outside none;
+  margin: 0;
+  padding: 0 10px;
+}
+
+#caroliveposts .post_content li {
+  border-bottom:1px dotted #CCC;
+}
+
+#caroliveposts .post_content ul li p {
+  margin: 0;
+}
+
+#caroliveposts .post_content ul li p.post_date, #caroliveposts .post_content ul li p.post_author {
+  font-style: italic;
+  color: #CCC;
+  font-size:11px;
+}
+#caroliveposts .seemore {
+	padding:10px;
+	text-align:center;
+	font-style:italic;
+}
+#caroliveposts .seemore a {
+	text-decoration:none;
+}

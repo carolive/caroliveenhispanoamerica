@@ -3,6 +3,7 @@
 <head profile="http://gmpg.org/xfn/11">
   <?php include 'head-commons.php'; ?>
   <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/homepage.css" media="screen" type="text/css" />
+  <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/carolive-news.css" media="screen" type="text/css" />
   <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/carouselskin.css" media="screen" type="text/css" />
 </head>
 <body class="no-customize-support">
@@ -16,6 +17,7 @@
       <div class="span-16 left_column">
         <div id="project" class="block">
           <!-- Début de la boucle pour récupérer la présentation du projet -->
+          <?php query_posts( 'cat=3&posts_per_page=1' ); ?>
           <?php while ( have_posts() ) : the_post(); ?>
 
             <!-- Teste si l'article est dans la catégorie 'présentation de projet' -->
@@ -34,6 +36,8 @@
 
           <!-- Stop The Loop (but note the "else:" - see next line). -->
           <?php endwhile; ?>
+          <!-- Reset Query -->
+          <?php wp_reset_query(); ?>
         </div>
       </div>
       

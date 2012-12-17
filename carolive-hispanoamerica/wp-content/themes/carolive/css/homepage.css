@@ -51,7 +51,7 @@ div.block#encouragment {
 /*** end ENCOURAGEMENTS ***/
 
 /*** POSTS ***/
-#caroliveposts #post_caro, #caroliveposts #post_olive {
+#caroliveposts .post_user {
   padding: 10px 0;
 	overflow:hidden;
 	max-height:62px;

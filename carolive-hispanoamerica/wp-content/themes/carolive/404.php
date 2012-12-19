@@ -11,7 +11,7 @@
   <div class="bodysite">
     <div class="container main"> <!-- container : la grille -->
       
-      <div class="span-24 left_column">
+      <div class="span-24 last left_column">
         <div id="working" class="block">
           <div class="block_title">
             <h2><span>En</span> travaux</h2>

@@ -1,0 +1,1 @@
+UPDATE `wp_terms` SET `term_id`=13 WHERE `term_id`=5;UPDATE `wp_terms` SET `term_id`=5 WHERE `term_id`=6;UPDATE `wp_terms` SET `term_id`=6 WHERE `term_id`=13;

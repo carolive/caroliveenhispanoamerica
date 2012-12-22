@@ -64,7 +64,7 @@
             </div>
           </div>
           <div class="seemore">
-            <a href="<?php get_category_link( 4 ); ?>">Lire tous les posts</a>
+            <a href="<?php echo get_category_link( 4 ); ?>">Lire tous les posts</a>
           </div>
         </div>
       </div>

@@ -20,7 +20,7 @@
           <div class="block_content">
             <div class="post_content">
               <ul>
-                <!-- Début de la boucle pour récupérer la présentation du projet -->
+                <!-- Début de la boucle pour récupérer les news -->
                 <?php while ( have_posts() ) : the_post(); ?>
 
                   <li class="post_user">
@@ -32,14 +32,14 @@
                     <p class="post_author"><?php the_author(); ?></p>
                   </li>
       
-                <!-- Stop The Loop (but note the "else:" - see next line). -->
+                <!-- Fin de la boucle -->
                 <?php endwhile; ?>
               </ul>
             </div>
           </div>
-        <div class="pagination">
-          <?php posts_nav_link(' &bull; ','&laquo; Articles précédents','Articles suivants &raquo;'); ?>
-        </div>
+          <div class="pagination">
+            <?php posts_nav_link(' &bull; ','&laquo; Articles précédents','Articles suivants &raquo;'); ?>
+          </div>
         </div>
       </div>
     

@@ -19,20 +19,15 @@
           <!-- Début de la boucle pour récupérer la présentation du projet -->
           <?php query_posts( 'cat=3&posts_per_page=1' ); ?>
           <?php while ( have_posts() ) : the_post(); ?>
-
-            <!-- Teste si l'article est dans la catégorie 'présentation de projet' -->
-            <?php if ( in_category('3') ) { ?>
             
-              <div class="block_title">
-                <h2><span>Présentation</span> du projet</h2>
-              </div>
-              <div class="block_content">
-                <div id="pres_text">
-                  <?php the_content(); ?>
-                </div>
-              </div>
-
-            <?php } ?>
+            <div class="block_title">
+              <h2><span>Présentation</span> du projet</h2>
+            </div>
+            <div class="block_content">
+              <article id="pres_text">
+                <?php the_content(); ?>
+              </article>
+            </div>
 
           <!-- Stop The Loop (but note the "else:" - see next line). -->
           <?php endwhile; ?>
@@ -69,7 +64,7 @@
             </div>
           </div>
           <div class="seemore">
-            <a href="<?php bloginfo('url'); ?>/?cat=4">Lire tous les posts</a>
+            <a href="<?php get_category_link( 4 ); ?>">Lire tous les posts</a>
           </div>
         </div>
       </div>

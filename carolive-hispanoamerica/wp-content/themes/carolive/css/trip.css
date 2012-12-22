@@ -1,0 +1,15 @@
+div.block#trip_presentation {
+	margin-bottom: 10px;
+}
+
+div.block#trip_map {
+	margin-top: 10px;
+}
+
+#trip_presentation .block_content, #trip_map .block_content {
+  padding: 5px;
+}
+
+#trip_presentation #pres_text p {
+  margin : 0 0 10px 0;
+}

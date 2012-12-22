@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<markers>
+  <marker>
+    <marker_id>1</marker_id>
+    <map_id>1</map_id>
+    <title></title>
+    <address>London</address>
+    <desc></desc>
+    <pic></pic>
+    <icon></icon>
+    <linkd></linkd>
+    <lat>48.72087170367941</lat>
+    <lng>2.2463239709090885</lng>
+    <anim></anim>
+    <infoopen></infoopen>
+  </marker>
+</markers>

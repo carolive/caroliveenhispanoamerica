@@ -3,7 +3,7 @@
 		<ul>
 			<li class="backtotop"><a href="#ceh">Haut de page</a></li>
 			<li class="copyright">&copy; copyright 2013 - Carolive En Hispanoamerica</li>
-		</ul
+		</ul>
 	</div>
 </footer>
 

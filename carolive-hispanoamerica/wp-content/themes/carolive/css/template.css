@@ -10,7 +10,7 @@ dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+figure, figcaption, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
@@ -22,7 +22,7 @@ time, mark, audio, video {
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
+hgroup, menu, nav, section {
 	display: block;
 }
 body {
@@ -72,16 +72,16 @@ h1 span, h2 span { /*met le premier mot en rouge*/
 }
 
 /*** HEADER ***/
-header {
+#header {
 	background:#eee url(../images/header_bg.jpg) repeat-x;
 }
-header h1 {
+#header h1 {
 	background:url(../images/logo.png) no-repeat;
 	margin:0 auto;
 	width:186px;
 	height:202px;
 }
-header  h1 span {display:none;}
+#header  h1 span {display:none;}
 .header_ctnr, .menu { /*centrage du header & du menu */
 	width: 960px;
   margin: 0 auto;
@@ -153,13 +153,6 @@ nav li.universe:hover, nav li.universe ul li:hover {
 	background-image: -webkit-linear-gradient(bottom, #BB6876 0%, #c42b2b 100%);
 	background-image: -ms-linear-gradient(bottom, #BB6876 0%, #c42b2b 100%);
 }
-nav li.universe.selected {
-	background-image: linear-gradient(bottom, #BB6876 0%, #c42b2b 100%);
-	background-image: -o-linear-gradient(bottom, #BB6876 0%, #c42b2b 100%);
-	background-image: -moz-linear-gradient(bottom, #BB6876 0%, #c42b2b 100%);
-	background-image: -webkit-linear-gradient(bottom, #BB6876 0%, #c42b2b 100%);
-	background-image: -ms-linear-gradient(bottom, #BB6876 0%, #c42b2b 100%);
-}
 nav li.universe ul li:hover {
 	-moz-box-shadow: 0px -2px 10px 0px #9b9b9b;
 	-webkit-box-shadow: 0px -2px 10px 0px #9b9b9b;
@@ -225,7 +218,7 @@ div.block_title h2 {
 /*** FIn de la pagination ***/
 
 /*** FOOTER ***/
-footer {
+#footer {
 	background-image: linear-gradient(bottom, #992222 0%, #c42b2b 100%);
 	background-image: -o-linear-gradient(bottom, #992222 0%, #c42b2b 100%);
 	background-image: -moz-linear-gradient(bottom, #992222 0%, #c42b2b 100%);
@@ -247,22 +240,22 @@ footer {
 	overflow:hidden;
 	padding:13px;
 }
-footer li {
+#footer li {
 	list-style:none;
 	display:inline;
 	text-transform:uppercase;
 	font-family: Play, Verdana, sans-serif;
 	color:#FFF;
 }
-footer a {
+#footer a {
 	color:#FFF;
 	text-decoration:none;
 }
-footer .copyright {
+#footer .copyright {
 	float:right;
 }
 
-footer .backtotop {
+#footer .backtotop {
 	
 }
 

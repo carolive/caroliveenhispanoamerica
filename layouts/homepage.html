@@ -6,6 +6,7 @@
   
   <link rel="stylesheet" href="../carolive-hispanoamerica/wp-content/themes/carolive/css/template.css" media="all" type="text/css" />
   <link rel="stylesheet" href="../carolive-hispanoamerica/wp-content/themes/carolive/css/homepage.css" media="all" type="text/css" />
+  <link rel="stylesheet" href="../carolive-hispanoamerica/wp-content/themes/carolive/css/carolive-news.css" media="all" type="text/css" />
   <link rel="stylesheet" href="../carolive-hispanoamerica/wp-content/themes/carolive/css/carouselskin.css" media="all" type="text/css" />
   <link rel="stylesheet" href="../carolive-hispanoamerica/wp-content/themes/carolive/css/grid.css" media="all" type="text/css" /> <!-- CSS qui gere la grille pour placer les elements -->
   
@@ -17,17 +18,16 @@
 </head>
 <body>
 
-	
-	<header> <!-- j'ai enleve le header du "bodysite" afin qu'il prenne toute la largeur-->
-    <div class="banner header_ctnr"> <!-- ajout de la classe header_ctnr que le header soit centre avec le reste de la page -->
+    <div id="header">
+	<div class="banner header_ctnr"> <!-- ajout de la classe header_ctnr que le header soit centre avec le reste de la page -->
       <!--<img src="../carolive-hispanoamerica/wp-content/themes/carolive/images/volcan.jpg" alt="Volcan de Bolivie (je crois)" />-->
       <a href="homepage.html"><h1 id="ceh" name="ceh"><span>Carolive en HispanoAmerica</span></h1></a>
     </div>
-	</header>
+	</div>
 	<nav>
 		<ul class="menu">
-			<li class="universe selected">
-				<span>Home</span>
+			<li class="universe">
+				<a href="#">Home</a>
 			</li>
 			<li class="universe">
 				<a href="getready.html">Préparatif</a>
@@ -305,13 +305,13 @@
       </div>
     </div>
   </div>
-	<footer> <!-- comme le header, j'enleve le footer du "bodysite" afin qu'il prenne toute la largeur -->
+	<div id="footer"> <!-- comme le header, j'enleve le footer du "bodysite" afin qu'il prenne toute la largeur -->
 		<div class="footer_ctnr"> <!-- comme le header, je rajoute une div pour centrer le contenu -->
 			<ul>
 				<li class="backtotop"><a href="#ceh">Haut de page</a></li>
 				<li class="copyright">&copy; copyright 2013 - Carolive En Hispanoamerica</li>
 			</ul
 		</div>
-  </footer>
+  </div>
 </body>
 </html>

@@ -2,9 +2,9 @@
 
 #Pull all new changes from github repository caroliveenhispanoamerica
 git pull
-echo "Updated project Carolive-en-hispanoamerica from repository github"
 
-read -p "Do you want to prepare a sql file for deployment (y/n)?" doSQL
+
+read -p "Voulez vous préparer le fichier de déploiement pour la prod (y/n)?" doSQL
 if [ $doSQL == "y" ]
 then
 	echo -e "\n"
@@ -16,11 +16,11 @@ then
 	#Get the last sql export file name
 	cd sql
 	workingFile="$(ls -rt *.sql | tail -1)"
-	echo "Working file : $workingFile"
+	echo "Fichier sql le plus récent (utilisé pour créé le nouveau) : $workingFile"
 	
 	#Generates the new file name
 	resultFile=$(basename ${workingFile} .sql)-prod.sql
-	echo "File will be created here : prod/${resultFile}"
+	echo "Le fichier généré sera enregistré ici : prod/${resultFile}"
 	
 	#Creates the new file if !exist
 	cd prod
@@ -33,12 +33,13 @@ then
 	fi
 	cd ..
 		
-	#Writes production file from locl one into the created file 'XXX-prod.sql'
+	#Writes production file from local one into the created file 'XXX-prod.sql'
 	sed -E 's/localhost|127.0.0.1/www.carolive-en-hispanoamerica.com/g' ${workingFile}> prod/${resultFile}
-	echo "All occurences of localhost or 127.0.0.1 were changed to www.carolive-en-hispanoamerica.com in ${resultFile}"
+	echo "Toutes les occurences de localhost ou 127.0.0.1 ont été remplacées par www.carolive-en-hispanoamerica.com dans ${resultFile}"
+    cd ..
 fi
 
-if [ "$(ls -A sql/update/)" ]
+if [ "$(ls -A sql/update)" ]
 then
 	echo "Répertoire sql/update n'est pas vide -> execution du script ..."
 	
@@ -55,13 +56,20 @@ echo '********** COPY FILES TO SERVER **************'
 echo '**********************************************'
 echo -e "\n"
 
-#FTPS="ftp.carolive-en-hispanoamerica.com" # remote ftp server
-#FTPF="/www/" # remote ftp server directory for $FTPU & $FTPP
+# Prepare wp-config.php for production server
+cp wp-config-prod.php carolive-hispanoamerica/wp-config.php
 
+# Remote ftp server
+FTPS="ftp.carolive-en-hispanoamerica.com"
+# Remote ftp server directory for $FTPU & $FTPP
+FTPF="/www"
 #read -p "Enter ftp username : " FTPU
 #read -s -p "Enter ftp password : " FTPP
-echo ''
-#read -p "Enter local directory to upload path [.] : " LOCALD
+# Local directory contents
+LOCALD="carolive-hispanoamerica/*"
 
-#ncftpput -m -u $FTPU -p $FTPP $FTPS  $FTPF $LOCALD
-#echo "commandeFTP $FTPU $FTPP $FTPS  $FTPF $LOCALD"
+echo -e "\n"
+ncftpput -m -u $FTPU -p $FTPP $FTPS  $FTPF $LOCALD
+
+# Reconfigure local parameters with local wp-config file
+cp wp-config-olivier.php carolive-hispanoamerica/wp-config.php

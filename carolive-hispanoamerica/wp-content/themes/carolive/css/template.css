@@ -174,6 +174,7 @@ div.bodysite {
 	-webkit-box-shadow: 0 5px 8px -3px #9b9b9b inset;
 	-o-box-shadow: 0 5px 8px -3px #9b9b9b inset;
 	box-shadow: 0 5px 8px -3px #9b9b9b inset;
+  filter:progid:DXImageTransform.Microsoft.Shadow(color=#9b9b9b, Direction=90, Strength=10);
 }
 .main {/* pour que le gris prenne toute la largeur, c'est le main qu'on centre*/
 	width: 960px;
@@ -203,7 +204,12 @@ div.right_column div.block {
 }
 
 div.block_title {
-	background-image: -moz-linear-gradient(center top , #F8F8F8 50%, #DFDFDF 100%);
+  background-image: linear-gradient(top, #F8F8F8 50%, #DFDFDF 100%);
+	background-image: -o-linear-gradient(top, #F8F8F8 50%, #DFDFDF 100%);
+	background-image: -moz-linear-gradient(top, #F8F8F8 50%, #DFDFDF 100%);
+	background-image: -webkit-linear-gradient(top, #F8F8F8 50%, #DFDFDF 100%);
+	background-image: -ms-linear-gradient(top, #F8F8F8 50%, #DFDFDF 100%);
+  background: #F8F8F8;
 	border-radius: 5px 5px 0 0;
 	padding: 5px;
 }

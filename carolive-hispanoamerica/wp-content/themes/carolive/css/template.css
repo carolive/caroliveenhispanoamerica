@@ -11,7 +11,7 @@ fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed, 
 figure, figcaption, hgroup, 
-menu, nav, output, ruby, section, summary,
+menu, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
 	padding: 0;
@@ -22,7 +22,7 @@ time, mark, audio, video {
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
-hgroup, menu, nav, section {
+hgroup, menu, section {
 	display: block;
 }
 body {
@@ -89,29 +89,29 @@ h1 span, h2 span { /*met le premier mot en rouge*/
 /*** end HEADER ***/
 
 /*** NAV ***/
-nav, nav li.universe ul li {
+#nav, #nav li.universe ul li {
 	background-image: linear-gradient(bottom, #992222 0%, #c42b2b 100%);
 	background-image: -o-linear-gradient(bottom, #992222 0%, #c42b2b 100%);
 	background-image: -moz-linear-gradient(bottom, #992222 0%, #c42b2b 100%);
 	background-image: -webkit-linear-gradient(bottom, #992222 0%, #c42b2b 100%);
 	background-image: -ms-linear-gradient(bottom, #992222 0%, #c42b2b 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#992222', endColorstr='#c42b2b',GradientType=0 ) progid:DXImageTransform.Microsoft.Shadow(color=#9b9b9b, Direction=90, Strength=10);
 	-moz-box-shadow: 0px -2px 10px 0px #9b9b9b;
 	-webkit-box-shadow: 0px -2px 10px 0px #9b9b9b;
 	-o-box-shadow: 0px -2px 10px 0px #9b9b9b;
 	box-shadow: 0px -2px 10px 0px #9b9b9b;
-	filter:progid:DXImageTransform.Microsoft.Shadow(color=#9b9b9b, Direction=90, Strength=10);
 }
-nav {
+#nav {
 	margin:-12px 0 0 0;
 	padding:0;
 	height:40px;
 	border-top:1px solid #f55151;
 	bottom:0;
 } 
-nav ul {
+#nav ul {
   list-style: none outside none;
 }
-nav li.universe {
+#nav li.universe {
 	list-style:none;
 	display:inline;
 	text-transform:uppercase;
@@ -123,13 +123,21 @@ nav li.universe {
 	float: left;
 	cursor: pointer;
 }
-nav li.universe a {
+#nav li.universe:hover {
+	background-image: linear-gradient(bottom, #BB6876 0%, #c42b2b 100%);
+	background-image: -o-linear-gradient(bottom, #BB6876 0%, #c42b2b 100%);
+	background-image: -moz-linear-gradient(bottom, #BB6876 0%, #c42b2b 100%);
+	background-image: -webkit-linear-gradient(bottom, #BB6876 0%, #c42b2b 100%);
+	background-image: -ms-linear-gradient(bottom, #BB6876 0%, #c42b2b 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#BB6876', endColorstr='#c42b2b',GradientType=0 );
+}
+#nav li.universe a {
   display: block;
   padding: 12px;
   color:#FFF;
   text-decoration:none;
 }
-nav li.universe ul {
+#nav li.universe ul {
   position: absolute;
   display: none;
   margin: 0;
@@ -139,26 +147,24 @@ nav li.universe ul {
   left: 0;
   z-index: 1;
 }
-nav li.universe ul li {
+#nav li.universe ul li {
   margin-top: 2px;
 }
-nav li.universe ul li a {
+#nav li.universe ul li a {
   padding: 6px 12px;
   font-size: 14px;
 }
-nav li.universe:hover, nav li.universe ul li:hover {
+#nav li.universe ul li:hover {
 	background-image: linear-gradient(bottom, #BB6876 0%, #c42b2b 100%);
 	background-image: -o-linear-gradient(bottom, #BB6876 0%, #c42b2b 100%);
 	background-image: -moz-linear-gradient(bottom, #BB6876 0%, #c42b2b 100%);
 	background-image: -webkit-linear-gradient(bottom, #BB6876 0%, #c42b2b 100%);
 	background-image: -ms-linear-gradient(bottom, #BB6876 0%, #c42b2b 100%);
-}
-nav li.universe ul li:hover {
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#BB6876', endColorstr='#c42b2b',GradientType=0 ) progid:DXImageTransform.Microsoft.Shadow(color=#9b9b9b, Direction=90, Strength=10);
 	-moz-box-shadow: 0px -2px 10px 0px #9b9b9b;
 	-webkit-box-shadow: 0px -2px 10px 0px #9b9b9b;
 	-o-box-shadow: 0px -2px 10px 0px #9b9b9b;
 	box-shadow: 0px -2px 10px 0px #9b9b9b;
-	filter:progid:DXImageTransform.Microsoft.Shadow(color=#9b9b9b, Direction=90, Strength=10);
 }
 /*** end NAV ***/
 

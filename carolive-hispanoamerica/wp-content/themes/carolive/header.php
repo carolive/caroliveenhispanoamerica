@@ -3,7 +3,7 @@
     <a href="homepage.html"><h1 id="ceh" name="ceh"><span>Carolive en HispanoAmerica</span></h1></a>
   </div>
 </div>
-<nav>
+<div id="nav">
 	<ul class="menu">
 		<li class="universe">
 			<a href="<?php bloginfo('url'); ?>">Home</a>
@@ -28,4 +28,4 @@
         </li>
     <?php } } ?>
 	</ul>
-</nav>
+</div>

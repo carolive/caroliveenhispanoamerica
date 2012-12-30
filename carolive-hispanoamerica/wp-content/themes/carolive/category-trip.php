@@ -13,26 +13,7 @@
     <div class="container main"> <!-- container : la grille -->
       
       <div class="span-16 left_column">
-        <div id="trip_presentation" class="block">
-          <!-- Début de la boucle pour récupérer l'article sur le voyage -->
-          <?php query_posts( 'post_type=carolive_trip' ); ?>
-          <?php while ( have_posts() ) : the_post(); ?>
-            
-            <div class="block_title">
-              <h2><span>Notre</span> voyage</h2>
-            </div>
-            <div class="block_content">
-              <article id="pres_text">
-                <?php the_content(); ?>
-              </article>
-            </div>
-
-          <!-- Fin de la boucle-->
-          <?php endwhile; ?>
-          <!-- Reset Query -->
-          <?php wp_reset_query(); ?>
-        </div>
-        
+                
         <div id="trip_map" class="block">
           <!-- Début de la boucle pour récupérer l'article sur le voyage -->
           <?php query_posts( 'post_type=carolive_map' ); ?>

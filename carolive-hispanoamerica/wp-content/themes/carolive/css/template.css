@@ -67,6 +67,10 @@ h2 {
 	font-size:20px;
 	line-height:1.2em;
 }
+h3 {
+  font-size: 16px;
+  font-weight: bold;
+}
 h1 span, h2 span { /*met le premier mot en rouge*/
 	color:#BF2A2A;
 }

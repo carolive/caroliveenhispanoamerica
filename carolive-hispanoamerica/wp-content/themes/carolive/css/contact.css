@@ -1,0 +1,12 @@
+#contact .block_content {
+  padding: 5px;
+}
+
+#contact h3 {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+#contact p {
+  margin: 0;
+}

@@ -46,7 +46,7 @@ table {
 
 /*** définition des fonts ***/
 /* font pour les titre : j'utilise une font gratuite via google*/
-@import url(http://fonts.googleapis.com/css?family=Play:400,700);
+@import url(http://fonts.googleapis.com/css?family=Cabin+Condensed:400,500,600,700);
 body, p {
 	font-family: Arial, helvetica, sans-serif;
 	font-size:13px;
@@ -59,12 +59,12 @@ a {
 	color:#549BCC;
 }
 h1, h2 {
-	font-family: Play, Verdana, sans-serif;
-	text-transform:uppercase;
+	font-family: 'Cabin Condensed', Verdana, sans-serif;
+	/*text-transform:uppercase;*/
 	color:#333;
 }
 h2 {
-	font-size:20px;
+	font-size:16px;
 	line-height:1.2em;
 }
 h3 {
@@ -77,7 +77,8 @@ h1 span, h2 span { /*met le premier mot en rouge*/
 
 /*** HEADER ***/
 #header {
-	background:#eee url(../images/header_bg.jpg) repeat-x;
+	background:#eee url(../images/header_bg.jpg) repeat;
+	height:225px;
 }
 #header h1 {
 	background:url(../images/logo.png) no-repeat;
@@ -93,6 +94,14 @@ h1 span, h2 span { /*met le premier mot en rouge*/
 /*** end HEADER ***/
 
 /*** NAV ***/
+.home {
+	background:url(../images/home_icon.png) no-repeat scroll 0 5px;
+	height:5px;
+	margin:5px;
+}
+.home span {
+	display:none;
+}
 #nav, #nav li.universe ul li {
 	background-image: linear-gradient(bottom, #992222 0%, #c42b2b 100%);
 	background-image: -o-linear-gradient(bottom, #992222 0%, #c42b2b 100%);
@@ -118,8 +127,8 @@ h1 span, h2 span { /*met le premier mot en rouge*/
 #nav li.universe {
 	list-style:none;
 	display:inline;
-	text-transform:uppercase;
-	font-family: Play, Verdana, sans-serif;
+	/*text-transform:uppercase;*/
+	font-family: 'Cabin Condensed', Verdana, sans-serif;
 	color:#FFF;
 	font-size: 16px;
 	margin: 0 18px;
@@ -260,7 +269,7 @@ div.block_title h2 {
 	list-style:none;
 	display:inline;
 	text-transform:uppercase;
-	font-family: Play, Verdana, sans-serif;
+	font-family: 'Cabin Condensed', Verdana, sans-serif;
 	color:#FFF;
 }
 #footer a {

@@ -15,7 +15,38 @@
     <div class="container main"> <!-- container : la grille -->
       
       <div class="span-16 left_column">
-        <div id="project" class="block">
+		
+		
+        <!-- Requête pour récupérer les derniers articles de la catégorie Voyage -->
+        <?php query_posts( 'cat=7&posts_per_page=5' ); ?>
+        <?php if ( have_posts() ) ?>
+			<div id="news" class="block">
+				<div class="block_content">
+					<ul>
+						<?php while ( have_posts() ) : the_post(); ?>
+							<li>
+								<?php the_post_thumbnail(array(560,300)); ?>
+								<div class="extract">
+									<p class="news_country">
+										<?php
+										$category = get_the_category(); 
+										echo $category[0]->cat_name;
+										?>
+									</p>
+									<p class="news_text">
+										<?php the_excerpt(); ?>
+									</p>
+									<a class="news_link" href="<?php the_permalink(); ?>">Lire la suite</a>
+								</div>
+							</li>
+						<?php endwhile; ?>
+					</ul>
+				</div>
+			</div>
+		<?php } ?>
+		<?php wp_reset_query(); ?>
+        
+		<div id="project" class="block">
           <!-- Début de la boucle pour récupérer la présentation du projet -->
           <?php query_posts( 'cat=3&posts_per_page=1' ); ?>
           <?php while ( have_posts() ) : the_post(); ?>

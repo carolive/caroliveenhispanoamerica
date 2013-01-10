@@ -18,3 +18,14 @@ $(document).ready(function(){
 	  });
   }, 5000);
 });
+
+$(document).ready(function(){
+  window.setInterval(function() {
+    var nbElements = $("#news ul li").length;
+    var newsToDisplay = Math.floor((Math.random()*nbElements)+1);
+    $("#news ul li").fadeOut();
+	window.setTimeout(function() {
+	  $("#news_" + newsToDisplay).fadeIn();
+	}, 400);
+  }, 5000);
+});

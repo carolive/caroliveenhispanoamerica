@@ -86,25 +86,14 @@ div.block#encouragment {
 	font-weight:bold;
 	text-decoration:none;
 }
-/*
 #news ul {
   list-style: none outside none;
   margin: 0;
   padding: 0;
 }
-
-#news ul li {
-  margin: 10px 0 0 0;
+#news ul li img{
+	width:560px;
 }
-
-#news ul  li:first-child {
-  margin-top: 0;
-}
-
-#news ul p {
-  margin: 0;
-}
-
 /**** end DERNIERS ATICLES PARUS ****/
 
 #photos ul {
@@ -113,14 +102,7 @@ div.block#encouragment {
   padding: 0;
 }
 
-#photos ul li {
- /* position: absolute;*/ /* je l'ai enlevé car il n'entrait pas dans son conteneur */
-}
-
 #photos ul li img{
-/* Je les fait un peu plus petites
-  height: 260px;
-  width: 320px;*/
 	width:260px;
 	height:150px;
 }

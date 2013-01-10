@@ -5,6 +5,7 @@
   <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/homepage.css" media="screen" type="text/css" />
   <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/carolive-news.css" media="screen" type="text/css" />
   <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/carouselskin.css" media="screen" type="text/css" />
+<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/homepage.js"></script>
 </head>
 <body class="no-customize-support">
 <?php wp_customize_support_script(); ?>
@@ -18,13 +19,16 @@
 		
 		
         <!-- Requête pour récupérer les derniers articles de la catégorie Voyage -->
-        <?php query_posts( 'cat=7&posts_per_page=5' ); ?>
+        <?php query_posts( 'cat=7&posts_per_page=8' ); ?>
         <?php if ( have_posts() ) ?>
 			<div id="news" class="block">
 				<div class="block_content">
 					<ul>
-						<?php while ( have_posts() ) : the_post(); ?>
-							<li>
+						<?php 
+						$news_number = 1;
+						while ( have_posts() ) : the_post();
+						?>
+							<li id="news_<?php echo $news_number ?>" <?php if ( $news_number > 1) { ?>style="display:none"<?php } ?>>
 								<?php the_post_thumbnail(array(560,300)); ?>
 								<div class="extract">
 									<p class="news_country">

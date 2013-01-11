@@ -12,15 +12,14 @@
   <div class="bodysite">
     <div class="container main"> <!-- container : la grille -->
       
-      <div class="span-16 left_column">
+      <div class="span-24 last left_column">
                 
-        <!-- Début de la boucle pour récupérer l'article sur le voyage -->
-        <?php query_posts( 'post_type=carolive_map' ); ?>
+        <!-- Début de la boucle pour récupérer l'article sur le s encouragements -->
         <?php while ( have_posts() ) : the_post(); ?>
-          <div id="trip_map" class="block">
             
+          <div id="encouragment" class="block">
             <div class="block_title">
-              <h2><span>Suivez</span> nous !</h2>
+              <h2><span>Un</span> petit mot</h2>
             </div>
             <div class="block_content">
                 <?php the_content(); ?>
@@ -29,13 +28,7 @@
           </div>
         <!-- Fin de la boucle-->
         <?php endwhile; ?>
-        <!-- Reset Query -->
-        <?php wp_reset_query(); ?>
         
-      </div>
-      
-      <div class="span-8 last right_column">
-        <?php get_sidebar(); ?>
       </div>
     
     </div>

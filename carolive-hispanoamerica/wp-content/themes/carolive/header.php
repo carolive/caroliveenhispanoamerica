@@ -6,7 +6,7 @@
 <div id="nav">
 	<ul class="menu">
 		<li class="universe">
-			<a href="<?php bloginfo('url'); ?>">Home</a>
+			<a href="<?php bloginfo('url'); ?>" class="home"><span>Home</span></a>
 		</li>
     <?php
     $universes = get_categories('orderby=id&exclude=1,3,4&hide_empty=0');

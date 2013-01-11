@@ -23,6 +23,10 @@
             </div>
             <div class="block_content">
                 <?php the_content(); ?>
+				<ol class="commentlist">
+                  <?php wp_list_comments(array('style' => 'ol')); ?>
+                </ol>
+				<?php comment_form(); ?> 
             </div>
 
           </div>

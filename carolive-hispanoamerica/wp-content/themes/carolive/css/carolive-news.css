@@ -33,11 +33,6 @@
   margin: 0;
 }
 
-#caroliveposts .post_content ul li p.post_date, #caroliveposts .post_content ul li p.post_author {
-  font-style: italic;
-  color: #CCC;
-  font-size:11px;
-}
 #caroliveposts .seemore {
 	padding:10px;
 	text-align:center;

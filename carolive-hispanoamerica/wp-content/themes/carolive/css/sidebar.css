@@ -1,0 +1,11 @@
+#sidebar ul li.category {
+  margin: 10px 10px 0 10px;
+}
+#sidebar ul ul li.post {
+margin-top: 5px;
+  text-indent: 10px;
+}
+
+#sidebar .block_content {
+  padding-bottom: 10px;
+}

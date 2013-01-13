@@ -3,6 +3,7 @@
 <head profile="http://gmpg.org/xfn/11">
   <?php include 'head-commons.php'; ?>
   <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/trip.css" media="screen" type="text/css" />
+  <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/sidebar.css" media="screen" type="text/css" />
 </head>
 <body class="no-customize-support">
 <?php wp_customize_support_script(); ?>

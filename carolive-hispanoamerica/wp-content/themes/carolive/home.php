@@ -5,7 +5,7 @@
   <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/homepage.css" media="screen" type="text/css" />
   <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/carolive-news.css" media="screen" type="text/css" />
   <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/carouselskin.css" media="screen" type="text/css" />
-<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/homepage.js"></script>
+  <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/homepage.js"></script>
 </head>
 <body class="no-customize-support">
 <?php wp_customize_support_script(); ?>
@@ -17,40 +17,39 @@
       
       <div class="span-16 left_column">
 		
-		
         <!-- Requête pour récupérer les derniers articles de la catégorie Voyage -->
-        <?php query_posts( 'cat=7&posts_per_page=8' ); ?>
+        <?php query_posts( 'cat=6&posts_per_page=8' ); ?>
         <?php if ( have_posts() ) { ?>
-			<div id="news" class="block">
-				<div class="block_content">
-					<ul>
-						<?php 
-						$news_number = 1;
-						while ( have_posts() ) : the_post();
-						?>
-							<li id="news_<?php echo $news_number ?>" <?php if ( $news_number > 1) { ?>style="display:none"<?php } ?>>
-								<?php the_post_thumbnail(array(560,300)); ?>
-								<div class="extract">
-									<p class="news_country">
-										<?php
-										$category = get_the_category(); 
-										echo $category[0]->cat_name;
-										?>
-									</p>
-									<p class="news_text">
-										<?php the_excerpt(); ?>
-									</p>
-									<a class="news_link" href="<?php the_permalink(); ?>">Lire la suite</a>
-								</div>
-							</li>
-						<?php endwhile; ?>
-					</ul>
-				</div>
-			</div>
-		<?php } ?>
-		
-		<?php wp_reset_query(); ?>
-        
+		      <div id="news" class="block">
+				    <div class="block_content">
+					    <ul>
+						    <?php 
+						    $news_number = 1;
+						    while ( have_posts() ) : the_post();
+						    ?>
+							    <li id="news_<?php echo $news_number ?>" <?php if ( $news_number > 1) { ?>style="display:none"<?php } ?>>
+								    <?php the_post_thumbnail(); ?>
+								    <div class="extract">
+									    <p class="news_country">
+										    <?php
+										    $category = get_the_category(); 
+										    echo $category[0]->cat_name;
+										    ?>
+									    </p>
+									    <?php the_excerpt(); ?>
+									    <a class="news_link" href="<?php the_permalink(); ?>">Lire la suite</a>
+								    </div>
+							    </li>
+						    <?php
+                $news_number++;
+                endwhile;
+                ?>
+					    </ul>
+            </div>
+			    </div>
+        <?php } ?>
+		    <?php wp_reset_query(); ?>
+    
 		<div id="project" class="block">
           <!-- Début de la boucle pour récupérer la présentation du projet -->
           <?php query_posts( 'cat=3&posts_per_page=1' ); ?>

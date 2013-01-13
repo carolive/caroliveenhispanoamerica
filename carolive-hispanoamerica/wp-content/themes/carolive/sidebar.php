@@ -2,7 +2,7 @@
 $categories = get_the_category();
 foreach ($categories as $category) :
 ?>
-<h3>More News From This Category</h3>
+<h3><?php echo $category->name ?></h3>
 <ul>
 	<?php
 	$posts = get_posts('numberposts=20&category='. $category->term_id);

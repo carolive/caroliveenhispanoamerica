@@ -20,7 +20,7 @@
 		
         <!-- Requête pour récupérer les derniers articles de la catégorie Voyage -->
         <?php query_posts( 'cat=7&posts_per_page=8' ); ?>
-        <?php if ( have_posts() ) ?>
+        <?php if ( have_posts() ) { ?>
 			<div id="news" class="block">
 				<div class="block_content">
 					<ul>
@@ -48,6 +48,7 @@
 				</div>
 			</div>
 		<?php } ?>
+		
 		<?php wp_reset_query(); ?>
         
 		<div id="project" class="block">

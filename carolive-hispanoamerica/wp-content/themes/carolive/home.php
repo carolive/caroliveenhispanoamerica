@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/carolive-news.css" media="screen" type="text/css" />
   <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/carouselskin.css" media="screen" type="text/css" />
   <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/homepage.js"></script>
+  <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/jquery.jcarousel.min.js"></script>
 </head>
 <body class="no-customize-support">
 <?php wp_customize_support_script(); ?>

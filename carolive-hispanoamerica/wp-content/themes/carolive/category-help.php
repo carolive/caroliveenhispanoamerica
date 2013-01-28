@@ -19,16 +19,17 @@
             
           <div id="encouragment" class="block">
             <div class="block_title">
-              <h2><span>Un</span> petit mot</h2>
+              <h2><span>Un petit mot</span> de votre part</h2>
             </div>
             <div class="block_content">
-                <?php the_content(); ?>
-				<ol class="commentlist">
-                  <?php wp_list_comments(array('style' => 'ol')); ?>
-                </ol>
-				<?php comment_form(); ?> 
+              <?php the_content(); ?>
+              <?php
+              global $withcomments;
+              $withcomments = true;
+              ?>
+              <?php comments_template(); ?>
+              <?php $withcomments = false; ?>
             </div>
-
           </div>
         <!-- Fin de la boucle-->
         <?php endwhile; ?>

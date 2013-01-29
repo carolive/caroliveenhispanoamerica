@@ -17,20 +17,19 @@
         <!-- Début de la boucle pour récupérer l'article sur le s encouragements -->
         <?php while ( have_posts() ) : the_post(); ?>
             
-          <div id="encouragment" class="block">
-            <div class="block_title">
-              <h2><span>Un petit mot</span> de votre part</h2>
-            </div>
+          <div id="encouragment_post" class="block">
             <div class="block_content">
               <?php the_content(); ?>
-              <?php
-              global $withcomments;
-              $withcomments = true;
-              ?>
-              <?php comments_template(); ?>
-              <?php $withcomments = false; ?>
             </div>
           </div>
+          
+          <?php
+          global $withcomments;
+          $withcomments = true;
+          ?>
+          <?php comments_template(); ?>
+          <?php $withcomments = false; ?>
+          
         <!-- Fin de la boucle-->
         <?php endwhile; ?>
         

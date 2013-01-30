@@ -28,14 +28,4 @@ function sb_force_comment( ) {
     $withcomments = true; //force to show the comment on category page
 }
 
-function carolive_comment( $comment, $args, $depth ) {
-  $GLOBALS['comment'] = $comment;
-?>
-	<li id="li-comment-<?php comment_ID(); ?>">
-			<div class="comment-content"><?php comment_text(); ?></div>
-  </li>
-
-<?php
-}
-
 ?>

@@ -2,7 +2,8 @@
 <html lang="fr">
 <head profile="http://gmpg.org/xfn/11">
   <?php include 'head-commons.php'; ?>
-  <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/trip.css" media="screen" type="text/css" />
+  <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/comments.css" media="screen" type="text/css" />
+  <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/comments.js"></script>
 </head>
 <body class="no-customize-support">
 <?php wp_customize_support_script(); ?>

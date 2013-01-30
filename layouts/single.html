@@ -6,10 +6,13 @@
   
   <link rel="stylesheet" href="../carolive-hispanoamerica/wp-content/themes/carolive/css/template.css" media="all" type="text/css" />
   <link rel="stylesheet" href="../carolive-hispanoamerica/wp-content/themes/carolive/css/grid.css" media="all" type="text/css" /> <!-- CSS qui gere la grille pour placer les elements -->
+  <link rel="stylesheet" href="../carolive-hispanoamerica/wp-content/themes/carolive/css/sidebar.css" media="all" type="text/css" />
+  <link rel="stylesheet" href="../carolive-hispanoamerica/wp-content/themes/carolive/css/comments.css" media="all" type="text/css" />
   
   <script src="http://code.jquery.com/jquery-1.8.2.js"></script>
   <script src="http://code.jquery.com/ui/1.9.1/jquery-ui.js"></script>
   <script type="text/javascript" src="../carolive-hispanoamerica/wp-content/themes/carolive/js/header.js"></script>
+  <script type="text/javascript" src="../carolive-hispanoamerica/wp-content/themes/carolive/js/comments.js"></script>
 </head>
 <body>
 
@@ -109,39 +112,57 @@
 	<li><a href="http://127.0.0.1/category/trip/costa-rica/" title="View all posts in Costa Rica" rel="category tag">Costa Rica</a></li></ul></p>, le 14/01/2013 à 20h40 par carolive</p>
               <p class="post_text"><p>Encore un autre post, mais comme je suis bête, je me rend compte qu&#8217;en fait il faudrait que je fasse 9 posts et pas 8 comme je pensais :( ou alors je modifie en dur la variable&#8230; je vais faire ça je crois en fait :)</p>
 </p>
-			  <div class="post_comments">
-			    <ul class="commentlist">
-  	<li id="li-comment-3">
-			<div class="comment-content"><p>c&#8217;est clair que t&#8217;es vraiment trop bête !!</p>
+            </div>
+
+          </div>
+			    <div id="comment_list" class="block">
+  <div class="block_title">
+    <h2><span>Les</span> Commentaires</h2>
+  </div>
+  <div class="block_content">
+    <ul>
+      	<li id="li-comment-3">
+    <div class="comment_meta">
+      <img alt='carolive' src='http://127.0.0.1/wp-content/uploads/2012/12/carolive_avatar.jpg' class='avatar avatar-70 photo' height='70' width='70' />      <p class="comment_author">carolive,<br />Le 28/01/2013</p>
+    </div>
+		<div class="comment_content"><p>c&#8217;est clair que t&#8217;es vraiment trop bête !!</p>
 </div>
   </li>
-
 </li>
 	<li id="li-comment-4">
-			<div class="comment-content"><p>hein, dites, vous pensez tous qu&#8217;elle est trop bête non ?</p>
+    <div class="comment_meta">
+      <img alt='carolive' src='http://127.0.0.1/wp-content/uploads/2012/12/carolive_avatar.jpg' class='avatar avatar-70 photo' height='70' width='70' />      <p class="comment_author">carolive,<br />Le 28/01/2013</p>
+    </div>
+		<div class="comment_content"><p>hein, dites, vous pensez tous qu&#8217;elle est trop bête non ?</p>
 </div>
   </li>
-
 </li>
-</ul>
-								<div id="respond">
-				<h3 id="reply-title">Ajouter un commentaire <small><a rel="nofollow" id="cancel-comment-reply-link" href="/sixieme-post/#respond" style="display:none;">Cancel reply</a></small></h3>
+    </ul>
+  </div>
+</div>
+
+
+
+<div id="comment_form" class="block">
+  <div class="block_title">
+    <h2><span>Ajouter</span> un ommentaire</h2>
+  </div>
+  <div class="block_content">
+    								<div id="respond">
+				<h3 id="reply-title"> <small><a rel="nofollow" id="cancel-comment-reply-link" href="/sixieme-post/#respond" style="display:none;">Cancel reply</a></small></h3>
 									<form action="http://127.0.0.1/wp-comments-post.php" method="post" id="commentform">
-																										<p class="comment-form-author"><input id="author" name="author" type="text" value="" size="30" /><label for="author">Nom (champ obligatoire)</label></p>
-<p class="comment-form-email"><input id="email" name="email" type="text" value="" size="30" /><label for="email">Mail (votre adresse email ne sera pas publiée) (champ obligatoire)</label></p>
-<p class="comment-form-url"><input id="url" name="url" type="text" value="" size="30" /><label for="url">Site web</label></p>
-												<p class="comment-form-comment"><textarea id="comment" name="comment" cols="68" rows="15" aria-required="true"></textarea></p>												<p class="form-submit">
+																			<p class="logged-in-as">Logué en tant que <a href="http://127.0.0.1/wp-admin/profile.php">carolive</a>. <a href="http://127.0.0.1/wp-login.php?action=logout&amp;redirect_to=http%3A%2F%2F127.0.0.1%2Fsixieme-post%2F&amp;_wpnonce=b813673ab4" title="Cliquer ici pour se déconnecter">Deconnexion</a></p>																			<p class="comment-form-comment"><textarea id="comment" name="comment" cols="68" rows="15" aria-required="true"></textarea></p>												<p class="form-submit">
 							<input name="submit" type="submit" id="submit" value="Envoyer" />
 							<input type='hidden' name='comment_post_ID' value='178' id='comment_post_ID' />
 <input type='hidden' name='comment_parent' id='comment_parent' value='0' />
 						</p>
-											</form>
+						<input type="hidden" id="_wp_unfiltered_html_comment_disabled" name="_wp_unfiltered_html_comment_disabled" value="1d292072e1" /><script>(function(){if(window===window.parent){document.getElementById('_wp_unfiltered_html_comment_disabled').name='_wp_unfiltered_html_comment';}})();</script>
+					</form>
 							</div><!-- #respond -->
-						 
-			  </div>
-            </div>
+						  </div>
+</div>
 
-          </div>
+ 
         <!-- Fin de la boucle-->
         		
 		<div class="pagination">
@@ -181,7 +202,7 @@
       </div>
     
     </div>
-  </div>        
+  </div>       
 	<div id="footer"> <!-- comme le header, j'enleve le footer du "bodysite" afin qu'il prenne toute la largeur -->
 		<div class="footer_ctnr"> <!-- comme le header, je rajoute une div pour centrer le contenu -->
 			<ul>

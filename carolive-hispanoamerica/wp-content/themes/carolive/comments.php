@@ -32,3 +32,18 @@ $comment_args = array(
     <?php comment_form($comment_args); ?>
   </div>
 </div>
+
+<?php
+function carolive_comment( $comment, $args, $depth ) {
+  $GLOBALS['comment'] = $comment;
+?>
+	<li id="li-comment-<?php comment_ID(); ?>">
+    <div class="comment_meta">
+      <?php echo get_avatar( $comment, 70 ); ?>
+      <p class="comment_author"><?php comment_author(); ?>,<br />Le <?php echo comment_date(); ?></p>
+    </div>
+		<div class="comment_content"><?php comment_text(); ?></div>
+  </li>
+<?php
+}
+?>

@@ -1,0 +1,49 @@
+#comment_list li {
+  padding: 10px 0;
+	overflow: hidden;
+  border-bottom:1px dotted #CCC;
+}
+#comment_list li.last_child {
+  border-bottom: 0px;
+}
+#comment_list .comment_meta {
+  float: left;
+  margin-right: 10px;
+}
+#comment_list img {
+	border:1px solid #e3e3e3;
+	background-image: linear-gradient(bottom, #F0F0F0 0%, #FAFAFA 100%);
+	background-image: -o-linear-gradient(bottom, #F0F0F0 0%, #FAFAFA 100%);
+	background-image: -moz-linear-gradient(bottom, #F0F0F0 0%, #FAFAFA 100%);
+	background-image: -webkit-linear-gradient(bottom, #F0F0F0 0%, #FAFAFA 100%);
+	background-image: -ms-linear-gradient(bottom, #F0F0F0 0%, #FAFAFA 100%);
+	padding:3px;
+	float:right;
+}
+#comment_list .comment_meta .comment_author {
+  margin-top: 80px;
+  text-align: center;
+}
+#comment_list .comment_content {
+  background: none repeat scroll 0 0 #FAFAFA;
+  border:1px solid #EFEFEF;
+  margin-left: 90px;
+  min-height: 90px;
+  padding: 10px;
+}
+
+#comment_form #respond {
+  padding-top: 10px;
+}
+#comment_form #respond label {
+  padding-left: 5px;
+}
+#comment_form #respond label span {
+  font-style: italic;
+  color: #CCC;
+  font-size:11px;
+}
+#comment_form #respond input#author, #comment_form #respond input#email, #comment_form #respond input#url, #comment_form #respond textarea {
+  background: none repeat scroll 0 0 #FAFAFA;
+  border:1px solid #EFEFEF;
+}

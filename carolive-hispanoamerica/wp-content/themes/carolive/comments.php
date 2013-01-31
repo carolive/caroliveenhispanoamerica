@@ -19,8 +19,8 @@ $comment_args = array(
 	'comment_notes_before' => '',
 	'comment_notes_after' => '',
 	'fields' => apply_filters( 'comment_form_default_fields', array(
-		'author' => '<p class="comment-form-author"><input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' /><label for="author">' . __( 'Nom', 'domainreference' ) . ( $req ? ' (champ obligatoire)' : '' ) . '</label></p>',
-		'email' => '<p class="comment-form-email"><input id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . ' /><label for="email">' . __( 'Mail', 'domainreference' ) . ' (votre adresse email ne sera pas publiée)' . ( $req ? ' (champ obligatoire)' : '' ) . '</label></p>',
+		'author' => '<p class="comment-form-author"><input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' /><label for="author">' . __( 'Nom', 'domainreference' ) . ( $req ? ' <span>(champ obligatoire)</span>' : '' ) . '</label></p>',
+		'email' => '<p class="comment-form-email"><input id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . ' /><label for="email">' . __( 'Mail', 'domainreference' ) . ( $req ? ' <span>(champ obligatoire)</span>' : '' ) . ' <span>(votre adresse email ne sera pas publiée)</span>' . '</label></p>',
 		'url' => '<p class="comment-form-url"><input id="url" name="url" type="text" value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30" /><label for="url">' . __( 'Site web', 'domainreference' ) . '</label></p>' ) ) );
 ?>
 
@@ -32,3 +32,18 @@ $comment_args = array(
     <?php comment_form($comment_args); ?>
   </div>
 </div>
+
+<?php
+function carolive_comment( $comment, $args, $depth ) {
+  $GLOBALS['comment'] = $comment;
+?>
+	<li id="li-comment-<?php comment_ID(); ?>">
+    <div class="comment_meta">
+      <?php echo get_avatar( $comment, 70 ); ?>
+      <p class="comment_author"><?php comment_author(); ?>,<br />Le <?php echo comment_date(); ?></p>
+    </div>
+		<div class="comment_content"><?php comment_text(); ?></div>
+  </li>
+<?php
+}
+?>

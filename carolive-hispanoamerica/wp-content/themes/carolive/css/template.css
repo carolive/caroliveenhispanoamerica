@@ -255,7 +255,7 @@ div.block_title h2 {
 /*** Fin de la pagination ***/
 
 /*** Présentation des posts ***/
-.post_date, .post_author {
+.post_date, .post_author, .comment_date, .comment_author {
   font-style: italic;
   color: #CCC;
   font-size:11px;

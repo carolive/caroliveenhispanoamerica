@@ -6,10 +6,12 @@
   
   <link rel="stylesheet" href="../carolive-hispanoamerica/wp-content/themes/carolive/css/template.css" media="all" type="text/css" />
   <link rel="stylesheet" href="../carolive-hispanoamerica/wp-content/themes/carolive/css/grid.css" media="all" type="text/css" /> <!-- CSS qui gere la grille pour placer les elements -->
+  <link rel="stylesheet" href="../carolive-hispanoamerica/wp-content/themes/carolive/css/comments.css" media="all" type="text/css" />
   
   <script src="http://code.jquery.com/jquery-1.8.2.js"></script>
   <script src="http://code.jquery.com/ui/1.9.1/jquery-ui.js"></script>
   <script type="text/javascript" src="../carolive-hispanoamerica/wp-content/themes/carolive/js/header.js"></script>
+  <script type="text/javascript" src="../carolive-hispanoamerica/wp-content/themes/carolive/js/comments.js"></script>
 </head>
 <body>
 
@@ -96,54 +98,73 @@
 	</div>
  
   <div class="bodysite">
-    
     <div class="container main"> <!-- container : la grille -->
-	  <div class="container main"> <!-- container : la grille -->
       
       <div class="span-24 last left_column">
                 
         <!-- Début de la boucle pour récupérer l'article sur le s encouragements -->
                     
-          <div id="encouragment" class="block">
-            <div class="block_title">
-              <h2><span>Un petit mot</span> de votre part</h2>
-            </div>
+          <div id="encouragment_post" class="block">
             <div class="block_content">
-              <p>Si vous voulez nous aider, Le plus simple est finalement de nous laisser un petit mot d&#8217;encouragement !</p>
-<p>Ainsi, même en moment de doute ou de mal du pays (on ne sait jamais), nous pourrons vous lire et cela nous remontera le moral à coup sûr :)</p>
-<p>Et même si tout va bien, nous serons ravis de vous avoir un peu avec nous grâce à ces petits mots.</p>
+              <p>Si vous voulez nous aider, Le plus simple c&#8217;est de nous laisser un petit mot d&#8217;encouragement !</p>
+<p>Comme ça, même en moment de doute ou de mal du pays (on ne sait jamais), on pourra vous lire et ça nous remontera le moral à coup sûr :)</p>
+<p>Et même si tout va bien, on sera ravis de vous avoir un peu avec nous grâce à ces petits mots.</p>
 <p>Attention, il faut vous appliquer, les meilleurs encouragements* seront placardés direct sur la Home Page !</p>
 <p>Merci d&#8217;avance !!</p>
-<p><em>* : Les critères sont définis de façon tout à fait aléatoire selon Carolive. Les principaux seront certainement l&#8217;humour et la sensibilité. Aucun pot de vin ne sera accepté par Caro, beaucoup trop attachée à sa propre déontologie. Après, vous pouvez toujours voir avec Olive, dont la morale est plus douteuse (oui, c&#8217;est bien Caro qui a écrit cet article)</em></p>
-                            <ul class="commentlist">
-  	<li id="li-comment-2">
-			<div class="comment-content"><p>Vous êtes supers géniaux !</p>
+<p><em>* : Les critères de choix sont définis de façon tout à fait personnelle par Carolive. Les principaux critères seront l&#8217;humour et la sensibilité. Aucun pot de vin ne sera accepté par Caro, un peu trop fixée sur les règles. Après, vous pouvez toujours voir avec Olive, dont la morale est peut-être plus douteuse</em></p>
+            </div>
+          </div>
+          
+                    <div id="comment_list" class="block">
+  <div class="block_title">
+    <h2><span>Les</span> Commentaires</h2>
+  </div>
+  <div class="block_content">
+    <ul>
+      	<li id="li-comment-2">
+    <div class="comment_meta">
+      <img alt='carolive' src='http://127.0.0.1/wp-content/uploads/2012/12/carolive_avatar.jpg' class='avatar avatar-70 photo' height='70' width='70' />      <p class="comment_author">carolive,<br />Le 13/01/2013</p>
+    </div>
+		<div class="comment_content"><p>Vous êtes supers géniaux !</p>
 </div>
   </li>
-
 </li>
-</ul>
-								<div id="respond">
-				<h3 id="reply-title">Ajouter un commentaire <small><a rel="nofollow" id="cancel-comment-reply-link" href="/sixieme-post/#respond" style="display:none;">Cancel reply</a></small></h3>
-									<form action="http://127.0.0.1/wp-comments-post.php" method="post" id="commentform">
-																										<p class="comment-form-author"><input id="author" name="author" type="text" value="" size="30" /><label for="author">Nom (champ obligatoire)</label></p>
-<p class="comment-form-email"><input id="email" name="email" type="text" value="" size="30" /><label for="email">Mail (votre adresse email ne sera pas publiée) (champ obligatoire)</label></p>
-<p class="comment-form-url"><input id="url" name="url" type="text" value="" size="30" /><label for="url">Site web</label></p>
-												<p class="comment-form-comment"><textarea id="comment" name="comment" cols="68" rows="15" aria-required="true"></textarea></p>												<p class="form-submit">
-							<input name="submit" type="submit" id="submit" value="Envoyer" />
-							<input type='hidden' name='comment_post_ID' value='178' id='comment_post_ID' />
-<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
-						</p>
-											</form>
-							</div><!-- #respond -->
-						                          </div>
-          </div>
+    </ul>
+  </div>
+</div>
+
+
+
+<div id="comment_form" class="block">
+  <div class="block_title">
+    <h2><span>Ajouter</span> un ommentaire</h2>
+  </div>
+  <div class="block_content">
+    								
+    <div id="respond">
+	  <h3 id="reply-title">
+	    <small>
+		  <a rel="nofollow" id="cancel-comment-reply-link" href="/encouragements/#respond" style="display:none;">Cancel reply</a>
+		</small>
+	  </h3>
+      <form action="http://127.0.0.1/wp-comments-post.php" method="post" id="commentform">
+	    <p class="comment-form-author"><input id="author" name="author" type="text" value="" size="30" /><label for="author">Nom <span>(champ obligatoire)</span></label></p>
+        <p class="comment-form-email"><input id="email" name="email" type="text" value="" size="30" /><label for="email">Mail <span>(champ obligatoire)</span> <span>(votre adresse email ne sera pas publiée)</span></label></p>
+        <p class="comment-form-url"><input id="url" name="url" type="text" value="" size="30" /><label for="url">Site web</label></p>
+		<p class="comment-form-comment"><textarea id="comment" name="comment" cols="68" rows="15" aria-required="true"></textarea></p>
+		<p class="form-submit"><input name="submit" type="submit" id="submit" value="Envoyer" /><input type='hidden' name='comment_post_ID' value='153' id='comment_post_ID' /><input type='hidden' name='comment_parent' id='comment_parent' value='0' /></p>
+	  </form>
+	</div><!-- #respond -->
+</div>
+</div>
+
+                    
         <!-- Fin de la boucle-->
                 
       </div>
     
     </div>
-  </div>    
+  </div>   
 	<div id="footer"> <!-- comme le header, j'enleve le footer du "bodysite" afin qu'il prenne toute la largeur -->
 		<div class="footer_ctnr"> <!-- comme le header, je rajoute une div pour centrer le contenu -->
 			<ul>

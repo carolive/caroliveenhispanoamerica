@@ -203,18 +203,25 @@ div.block {
 	background:white;
 	margin:30px;
 }
+
+div[class$="_column"] {
+	margin-top: 5px;
+}
+
 /*** COLONNE DE GAUCHE */
 div.left_column {
 	background-color:#FFF;
 	box-shadow: 0px 0px 3px #AAA;
-	margin: 0 0 0 5px;
+	margin-right: 5px;
 }
 
 /*** COLONNE DE DROITE */
 div.right_column {
+	float: right;
 	background-color:#f5f5f5;
 	box-shadow: 0px 0px 3px #AAA;
 }
+
 div.right_column div.block {
 	background:white;
 	margin:5px;
@@ -229,6 +236,7 @@ div.block_title {
 	background-image: -ms-linear-gradient(top, #F8F8F8 50%, #DFDFDF 100%);
 	border-radius: 5px 5px 0 0;
 	padding: 5px;
+	margin: 5px 0;
 }
 
 div.block_title h2 {

@@ -26,8 +26,24 @@
 }
 #comment_list .comment_content {
   background: none repeat scroll 0 0 #FAFAFA;
+  border:1px solid #EFEFEF;
   margin-left: 90px;
   min-height: 90px;
-  border:1px solid #EFEFEF;
   padding: 10px;
+}
+
+#comment_form #respond {
+  padding-top: 10px;
+}
+#comment_form #respond label {
+  padding-left: 5px;
+}
+#comment_form #respond label span {
+  font-style: italic;
+  color: #CCC;
+  font-size:11px;
+}
+#comment_form #respond input#author, #comment_form #respond input#email, #comment_form #respond input#url, #comment_form #respond textarea {
+  background: none repeat scroll 0 0 #FAFAFA;
+  border:1px solid #EFEFEF;
 }

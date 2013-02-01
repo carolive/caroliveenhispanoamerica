@@ -23,8 +23,12 @@
               <h2><?php the_title(); ?></h2>
             </div>
             <div class="block_content">
-			  <p class="post_infos"><p><?php the_category(); ?></p>, le <?php echo get_the_date(); ?> à <?php the_time(); ?> par <?php the_author(); ?></p>
-              <p class="post_text"><?php the_content(); ?></p>
+              <?php 
+              $categories = get_the_category();
+              $category = $categories[0];
+              ?>
+              <p class="post_infos"><a href="<?php echo get_category_link($category->term_id ); ?>"><?php echo $category->cat_name; ?></a>, <span>le <?php echo get_the_date(); ?> à <?php the_time(); ?> par <?php the_author(); ?></span></p>
+              <div class="post_text"><?php the_content(); ?></div>
             </div>
 
           </div>

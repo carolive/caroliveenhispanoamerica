@@ -30,15 +30,15 @@
               <p class="post_infos"><a href="<?php echo get_category_link($category->term_id ); ?>"><?php echo $category->cat_name; ?></a>, <span>le <?php echo get_the_date(); ?> à <?php the_time(); ?> par <?php the_author(); ?></span></p>
               <div class="post_text"><?php the_content(); ?></div>
             </div>
+            
+            <div class="pagination">
+              <?php previous_post_link('&laquo; %link', '%title', TRUE); ?> &bull; <?php next_post_link('%link &raquo;', '%title', TRUE); ?>
+            </div>
 
           </div>
 			    <?php comments_template(); ?> 
         <!-- Fin de la boucle-->
         <?php endwhile; ?>
-		
-		<div class="pagination">
-		  <?php previous_post_link('&laquo; %link', '%title', TRUE); ?> &bull; <?php next_post_link('%link &raquo;', '%title', TRUE); ?>
-        </div>
         
       </div>
       

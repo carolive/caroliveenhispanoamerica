@@ -263,6 +263,10 @@ div.block_title h2 {
 .post_text {
   padding-top: 15px;
 }
+#post .block_content {
+  padding-bottom: 15px;
+  border-bottom:1px dotted #CCC;
+}
 /*** Fin de présentation des posts ***/
 
 /*** FOOTER ***/

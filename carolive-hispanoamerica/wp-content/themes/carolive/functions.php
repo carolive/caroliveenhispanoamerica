@@ -41,4 +41,9 @@ function sb_force_comment( ) {
 	if(is_category())
 		$withcomments = true; //force to show the comment on category page
 }
+
+
+// Taille des images :
+add_theme_support('post-thumbnails');
+add_image_size('trip-thumbnail', 210, 280);
 ?>

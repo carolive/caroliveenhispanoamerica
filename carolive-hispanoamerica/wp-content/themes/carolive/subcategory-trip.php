@@ -21,11 +21,10 @@
 			<div class="span-24 left_column">
 				<!-- Début de la boucle pour récupérer l'article de présentation du pays -->
 				<?php
-				global $wpdb;
+					global $wpdb;
 					
-				$current_cat = single_cat_title("", false);
-				$main_post_id = $wpdb->get_var( "SELECT ID FROM $wpdb->posts WHERE post_title LIKE '%" . $current_cat . "%'" );
-
+					$current_cat = single_cat_title("", false);
+					$main_post_id = $wpdb->get_var( "SELECT ID FROM $wpdb->posts WHERE post_title LIKE '%" . $current_cat . "%'" );
 				?>
 
 				<?php query_posts( 'post_type=carolive_country&p='.$main_post_id ); ?>

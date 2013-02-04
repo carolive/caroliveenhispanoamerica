@@ -1,0 +1,1 @@
+CREATE TABLE best_of_comments (comment_id int);

@@ -51,7 +51,7 @@
         <?php } ?>
 		    <?php wp_reset_query(); ?>
     
-		<div id="project" class="block">
+        <div id="project" class="block">
           <!-- Début de la boucle pour récupérer la présentation du projet -->
           <?php query_posts( 'cat=3&posts_per_page=1' ); ?>
           <?php while ( have_posts() ) : the_post(); ?>
@@ -70,6 +70,31 @@
           <!-- Reset Query -->
           <?php wp_reset_query(); ?>
         </div>
+        
+        <?php
+					global $wpdb;
+					$comments = $wpdb->get_results( "SELECT comment_author, comment_content FROM $wpdb->comments WHERE comment_ID IN (SELECT comment_id FROM best_of_comments)" );
+          if ( $comments ) {
+				?>
+          <div id="encouragment" class="block">
+            <div class="block_title">
+              <h2><span>Meilleurs</span> encouragements</h2>
+            </div>
+            <div class="block_content">
+              <ul id="courage_carousel" class="jcarousel-skin-carolive">
+                <?php foreach ( $comments as $comment ) { ?>
+                  <li>
+                    <div>
+                      <p class="courage_text"><?php comment_text(); ?></p>
+                      <p class="courage_sign"><?php comment_author(); ?></p>
+                    </div>
+                  </li>
+                <?php } ?>
+              </ul>
+            </div>
+          </div>
+        <?php } ?>
+        
       </div>
       
       <div class="span-8 last right_column">

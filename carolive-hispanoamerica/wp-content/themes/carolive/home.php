@@ -89,7 +89,7 @@
                       <?php echo get_avatar( get_the_author_meta('ID'), 54 ); ?>
                     </div>
                     <p class="post_date">Le <?php echo get_the_date(); ?> à <?php the_time(); ?> par <?php the_author(); ?></p>
-                    <p class="post_text"><?php the_content(); ?></p>
+                    <div class="post_text"><?php the_content(); ?></div>
                   </li>
       
                 <!-- Stop The Loop (but note the "else:" - see next line). -->

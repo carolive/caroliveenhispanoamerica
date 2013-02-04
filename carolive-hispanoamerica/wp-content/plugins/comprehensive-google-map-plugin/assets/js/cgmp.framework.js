@@ -277,6 +277,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 						// quote + add line break replacing code ':!:'
 						// csvString = Utils.searchReplace(csvString, "'", "");
 						csvString = Utils.searchReplace(csvString, ":!:", "<br />");
+						csvString = Utils.searchReplace(csvString, "%!%", "\u0027");
 
 						if (isGeoMashap === "true") {
 							var json = parseJson(csvString);
@@ -1107,8 +1108,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 						var currentElementId = $(element).attr('id');
 						var jsonString = $(element).find('param#json-string-' + currentElementId).val();
-						// carolive : we need the simple quote 
-						// jsonString = Utils.searchReplace(jsonString, "'", "");
+						// carolive : we need the simple quote
+						// jsonString = Utils.searchReplace(jsonString, "'",
+						// "");
 						jsonString = jsonString.replace("&quot;", "");
 
 						var json = parseJson(jsonString);

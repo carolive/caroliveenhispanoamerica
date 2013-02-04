@@ -45,7 +45,7 @@
 	padding: 0;
 }
 
-#post ul li img,  .block_content > div {
+#post ul li img, #country .block_content > div {
 	float: left;
 	margin: 0 10px 10px 0;
 }

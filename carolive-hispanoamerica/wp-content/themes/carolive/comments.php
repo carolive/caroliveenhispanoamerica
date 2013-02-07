@@ -30,6 +30,7 @@ $comment_args = array(
   </div>
   <div class="block_content">
     <?php comment_form($comment_args); ?>
+	<p>Nous utilisons <a href="http://fr.gravatar.com/" >Gravatar</a> pour gérer les avatars. Sur leur site, vous pouvez définir une photo liée à une adresse email. Si vous utilisez ensuite cette adresse email pour mettre un commentaire sur ce site, la photo choisie apparaitra automatiquement à côté de vos commentaires.</p>
   </div>
 </div>
 

@@ -1,7 +1,6 @@
 $(document).ready(function(){
   $("#courage_carousel").jcarousel({
     visible: 3,
-    wrap: "circular"
   });
 });
 

@@ -68,7 +68,7 @@
 								<p class="news_country">
 									<?php the_title(); ?>
 								</p>
-								<?php the_post_thumbnail('trip-thumbnail'); ?>
+								<?php the_post_thumbnail('trip-post-thumbnail'); ?>
 								<div class="extract">
 									<?php the_excerpt(); ?>
 									<a class="news_link" href="<?php the_permalink(); ?>">Lire la

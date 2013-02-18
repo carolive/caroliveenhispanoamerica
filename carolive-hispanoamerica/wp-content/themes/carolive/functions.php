@@ -2,6 +2,8 @@
 
 if ( function_exists( 'add_theme_support' ) ) {
 	add_theme_support( 'post-thumbnails' );
+	// Taille des images :
+	add_image_size('trip-post-thumbnail', 210, 280);
 }
 
 function inherit_template() {
@@ -43,7 +45,4 @@ function sb_force_comment( ) {
 }
 
 
-// Taille des images :
-add_theme_support('post-thumbnails');
-add_image_size('trip-thumbnail', 210, 280);
 ?>

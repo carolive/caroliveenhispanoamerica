@@ -38,7 +38,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 					script = undefined;
     			}
 			};
-			// Use insertBefore instead of appendChild  to circumvent an IE6 bug - die IE6, just die! A.Z.
+			// Use insertBefore instead of appendChild to circumvent an IE6 bug
+			// - die IE6, just die! A.Z.
 			// head.insertBefore( script, head.firstChild );
 			head.appendChild(script);
 		} else {
@@ -149,13 +150,17 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 							return false;
 						}
 
-						var kmlLayer = new google.maps.KmlLayer(url/*, {preserveViewport: true}*/);
+						var kmlLayer = new google.maps.KmlLayer(url/*
+																	 * ,
+																	 * {preserveViewport:
+																	 * true}
+																	 */);
 						google.maps.event.addListener(kmlLayer, "status_changed", function() {
 							kmlLayerStatusEventCallback(kmlLayer);
 						});
                   google.maps.event.addListener(kmlLayer, 'defaultviewport_changed', function() {
-                     //var bounds = kmlLayer.getDefaultViewport();
-                     //googleMap.setCenter(bounds.getCenter());
+                     // var bounds = kmlLayer.getDefaultViewport();
+                     // googleMap.setCenter(bounds.getCenter());
                   });
 
 						kmlLayer.setMap(googleMap);
@@ -164,7 +169,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 					function kmlLayerStatusEventCallback(kmlLayer)  {
 							var kmlStatus = kmlLayer.getStatus();
 							if (kmlStatus == google.maps.KmlLayerStatus.OK) {
-								//Hmmm...
+								// Hmmm...
 							} else {
 								var msg = '';
 								switch(kmlStatus) {
@@ -268,7 +273,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 						wasBuildAddressMarkersCalled = true;
 						csvString = Utils.trim(markerLocations);
-						csvString = Utils.searchReplace(csvString, "'", "");
+						// Carolive : comment the next line to keep the simple
+						// quote + add line break replacing code ':!:'
+						// csvString = Utils.searchReplace(csvString, "'", "");
+						csvString = Utils.searchReplace(csvString, ":!:", "<br />");
+						csvString = Utils.searchReplace(csvString, "%!%", "\u0027");
 
 						if (isGeoMashap === "true") {
 							var json = parseJson(csvString);
@@ -290,12 +299,16 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 					function resetMap()  {
 						if (originalExtendedBounds != null) {
 							if (googleMap.getCenter() != originalExtendedBounds.getCenter()) {
-								//Logger.info("Panning map back to its original bounds center: " + originalExtendedBounds.getCenter());
+								// Logger.info("Panning map back to its original
+								// bounds center: " +
+								// originalExtendedBounds.getCenter());
 								googleMap.fitBounds(originalExtendedBounds);
 								googleMap.setCenter(originalExtendedBounds.getCenter());
 							}
 						} else 	if (originalMapCenter != null) {
-							//Logger.info("Panning map back to its original center: " + originalMapCenter  + " and updated zoom: " + updatedZoom);
+							// Logger.info("Panning map back to its original
+							// center: " + originalMapCenter + " and updated
+							// zoom: " + updatedZoom);
 							googleMap.setCenter(originalMapCenter);
 							googleMap.setZoom(updatedZoom);
 						}
@@ -427,8 +440,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 								});
 							} else {
-								// no street view available in this range, or some error occurred
-								//Logger.warn("There is not street view available for this marker location: " + marker.position + " status: " + status);
+								// no street view available in this range, or
+								// some error occurred
+								// Logger.warn("There is not street view
+								// available for this marker location: " +
+								// marker.position + " status: " + status);
 								$('a#trigger-' + localBubbleData.bubbleHolderId).live("click", function(e) {
 									e.preventDefault();
 								});
@@ -537,7 +553,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 											infowindow.close();
 
 										} else {
-											//Logger.error('Could not route directions from "' + old_a_addr + '" to "' + old_b_addr + '", got result from Google: ' + status);
+											// Logger.error('Could not route
+											// directions from "' + old_a_addr +
+											// '" to "' + old_b_addr + '", got
+											// result from Google: ' + status);
 											targetDiv.html("<span style='font-size: 12px; font-weight: bold; color: red'>Could not route directions from<br />'" + old_a_addr + "' to<br />'" + old_b_addr + "'<br />Got result from Google: [" + status + "]</span>");
 
 											$(dirDivId + ' button#print_sub').hide();
@@ -582,14 +601,16 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 							if (thisId == 'dir_d_btn') {
 								if ($(dirDivId + ' a#dir_d_btn').hasClass('selected')) {
-									//Logger.warn("Driving travel mode is already selected");
+									// Logger.warn("Driving travel mode is
+									// already selected");
 								} else {
 									$(dirDivId + ' a#dir_d_btn').addClass('selected');
 									$(dirDivId + ' a#dir_w_btn').removeClass('selected');
 								}
 							} else 	if (thisId == 'dir_w_btn') {
 								if ($(dirDivId + ' a#dir_w_btn').hasClass('selected')) {
-									//Logger.warn("Walking travel mode is already selected");
+									// Logger.warn("Walking travel mode is
+									// already selected");
 								} else {
 									$(dirDivId + ' a#dir_w_btn').addClass('selected');
 									$(dirDivId + ' a#dir_d_btn').removeClass('selected');
@@ -609,17 +630,19 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 						randomNumber = randomNumber + "-" + mapDivId;
 
 						var	bubble = "<div id='bubble-" + randomNumber + "' style='height: 130px !important; width: 300px !important;' class='bubble-content'>";
-						//var bubble = document.createElement("div");
-						//bubble.id = "bubble-" + randomNumber;
-						//bubble.setAttribute("class", "bubble-content");
-						//bubble.style.cssText = "height: 330px !important; width: 300px !important;";
+						// var bubble = document.createElement("div");
+						// bubble.id = "bubble-" + randomNumber;
+						// bubble.setAttribute("class", "bubble-content");
+						// bubble.style.cssText = "height: 330px !important;
+						// width: 300px !important;";
 
 
 						if (!markersElement.geoMashup) {
 							bubble += "<h4>" + CGMPGlobal.translations.address + ":</h4>";
 							bubble += "<p class='custom-bubble-text'>" + contentFromMarker + "</p>";
 							if (markersElement.customBubbleText != '') {
-								//var decodedHtml = $("<p></p>").html(markersElement.customBubbleText).text();
+								// var decodedHtml =
+								// $("<p></p>").html(markersElement.customBubbleText).text();
 								bubble += "<p class='custom-bubble-text'>" + markersElement.customBubbleText + "</p>";
 							}
 						} else {
@@ -640,14 +663,16 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 					function parseCsv() {
 						var locations = csvString.split("|");
 
-						//Logger.info("Exploded CSV into locations: " + locations);
+						// Logger.info("Exploded CSV into locations: " +
+						// locations);
 
 						for (var i = 0; i < locations.length; i++) {
 							var target = locations[i];
 							if (target != null && target != "") {
 								target = Utils.trim(target);
 								if (target == "") {
-									//Logger.warn("Given extra marker address is empty");
+									// Logger.warn("Given extra marker address
+									// is empty");
 									continue;
 								}
 								pushGeoDestination(target, (i + 1));
@@ -662,7 +687,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 							if (this.excerpt == null) {
 								this.excerpt = '';
 							}
-							//Logger.info("Looping over JSON object:\n\tTitle: " + this.title + "\n\tAddy: " + this.addy + "\n\tLink: " + this.permalink + "\n\tExcerpt: " + this.excerpt);
+							// Logger.info("Looping over JSON object:\n\tTitle:
+							// " + this.title + "\n\tAddy: " + this.addy +
+							// "\n\tLink: " + this.permalink + "\n\tExcerpt: " +
+							// this.excerpt);
 							var targetArr = this.addy.split(CGMPGlobal.sep);
                      targetArr[0] = this.location;
                      addGeoPoint(index, targetArr, this.title, this.permalink, this.excerpt, infoBubbleContainPostLink);
@@ -681,7 +709,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 							 storeAddress(index, targetArr, '', '', '', false);
 						 } else {
 							 storeAddress(index, targetArr, '', '', '', false);
-							 //Logger.warn("Unknown type of geo destination in regexp: " + targetArr[0] + ", fallingback to store it as an address");
+							 // Logger.warn("Unknown type of geo destination
+								// in regexp: " + targetArr[0] + ", fallingback
+								// to store it as an address");
 						 }
 					}
 
@@ -694,7 +724,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 							} else {
 								targetArr[2] = '';
 							}
-							//Logger.info("Storing address: " + targetArr[0] + " for marker-to-be for the map ID: " + mapDivId);
+							// Logger.info("Storing address: " + targetArr[0] +
+							// " for marker-to-be for the map ID: " + mapDivId);
 							storedAddresses.push({
 								address: targetArr[0],
 								animation: google.maps.Animation.DROP,
@@ -718,7 +749,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 						}
 
 						if (latlngArr.length == 0) {
-							//Logger.warn("Exploded lat/long array has length of zero");
+							// Logger.warn("Exploded lat/long array has length
+							// of zero");
 							return false;
 						}
 
@@ -726,7 +758,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 						latlngArr[1] = Utils.trim(latlngArr[1]);
 
 						if (latlngArr[0] == '' || latlngArr[1] == '') {
-							//Logger.warn("Lat or Long are empty string");
+							// Logger.warn("Lat or Long are empty string");
 							return false;
 						}
 
@@ -740,11 +772,15 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 							var element = storedAddresses.shift();
 
 							if (element.address instanceof google.maps.LatLng) {
-                        //Logger.info("No need to query Geo service for [" + element.address + "]. Have left " + storedAddresses.length + " items to process!");
+                        // Logger.info("No need to query Geo service for [" +
+						// element.address + "]. Have left " +
+						// storedAddresses.length + " items to process!");
 								buildLocationFromCoords(element);
-                        //setBounds();
+                        // setBounds();
 							} else {
-                        //Logger.info("Passing [" + element.address + "] to Geo service. Have left " + storedAddresses.length + " items to process!");
+                        // Logger.info("Passing [" + element.address + "] to Geo
+						// service. Have left " + storedAddresses.length + "
+						// items to process!");
 								var geocoderRequest = {"address": element.address};
 								geocoder.geocode(geocoderRequest, function (results, status) {
 									geocoderCallback(results, status, element);
@@ -803,7 +839,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 							storedAddresses.push(element);   	
 							timeout = setTimeout(function() { queryGeocoderService(); }, 3000);
 						} else if (status == google.maps.GeocoderStatus.ZERO_RESULTS) {
-							//Logger.warn("Got ZERO results for [" + element.address + "]. Have left " + markers.length + " items to process");
+							// Logger.warn("Got ZERO results for [" +
+							// element.address + "]. Have left " +
+							// markers.length + " items to process");
 							badAddresses.push(element.address);
 							timeout = setTimeout(function() { queryGeocoderService(); }, 400);
 						}
@@ -927,7 +965,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 					}
 					var print = function print(message) {
 						if ( $.browser.msie ) {
-							//Die... die... die.... why dont you just, die???
+							// Die... die... die.... why dont you just, die???
 						 } else {
 							if ($.browser.mozilla && parseInt($.browser.version) >= 1 ) {
 								console.log(message);
@@ -1016,10 +1054,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 					})();
 
 
-				//$(document).ready(function() {
+				// $(document).ready(function() {
 
 					if ($('object#global-data-placeholder').length == 0) {
-						//Logger.fatal("The global HTML <object> element is undefined. Aborting map generation .. d[-_-]b");
+						// Logger.fatal("The global HTML <object> element is
+						// undefined. Aborting map generation .. d[-_-]b");
 						return;
 					}
 
@@ -1042,17 +1081,21 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 					var version = parseFloat($.fn.jquery);
 					if (version < 1.3) {
 						alert(CGMPGlobal.errors.oldJquery);
-						//Logger.fatal("Client uses jQuery older than the version 1.3.0. Aborting map generation ..");
+						// Logger.fatal("Client uses jQuery older than the
+						// version 1.3.0. Aborting map generation ..");
 						return false;
 					}
 
 					if (typeof google == "undefined" || !google) {
 						Errors.alertError(CGMPGlobal.errors.msgNoGoogle);
-						//Logger.fatal("We do not have reference to Google API. Aborting map generation ..");
+						// Logger.fatal("We do not have reference to Google API.
+						// Aborting map generation ..");
 						return false;
 					} else if (typeof GMap2 != "undefined" && GMap2) {
 						Errors.alertError(CGMPGlobal.errors.msgApiV2);
-						//Logger.fatal("It looks like the webpage has reference to GMap2 object from Google API v2. Aborting map generation ..");
+						// Logger.fatal("It looks like the webpage has reference
+						// to GMap2 object from Google API v2. Aborting map
+						// generation ..");
 						return false;
 					}
 
@@ -1065,13 +1108,16 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 						var currentElementId = $(element).attr('id');
 						var jsonString = $(element).find('param#json-string-' + currentElementId).val();
-						jsonString = Utils.searchReplace(jsonString, "'", "");
+						// carolive : we need the simple quote
+						// jsonString = Utils.searchReplace(jsonString, "'",
+						// "");
 						jsonString = jsonString.replace("&quot;", "");
 
 						var json = parseJson(jsonString);
 
 						if (typeof json == "undefined" || !json) {
-							//Logger.fatal("We did not parse JSON from OBJECT param. Aborting map generation ..");
+							// Logger.fatal("We did not parse JSON from OBJECT
+							// param. Aborting map generation ..");
 							return false;
 						}
 
@@ -1124,12 +1170,14 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 									}
 								}
 						} else {
-							//Logger.fatal("It looks like the map DIV placeholder ID [" + json.id + "] does not exist in the page!");
+							// Logger.fatal("It looks like the map DIV
+							// placeholder ID [" + json.id + "] does not exist
+							// in the page!");
 						}
 					});
 
 				}
-					//});
+					// });
 			}(jQueryObj));
 		}
 	})();

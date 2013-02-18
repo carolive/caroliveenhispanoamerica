@@ -40,25 +40,23 @@
     position: absolute;
     top: 75px;
     right: 0;
-    width: 32px;
-    height: 32px;
+    width: 46px;
+    height: 47px;
     cursor: pointer;
-    background: transparent url(../images/next-horizontal.png) no-repeat 0 0;
+    background: transparent url(../images/prev-next-buttons.png) no-repeat 0 0;
+	background-position: 0 -47px;
 }
 
 .jcarousel-skin-carolive .jcarousel-direction-rtl .jcarousel-next-horizontal {
     left: 0;
     right: auto;
-    background-image: url(../images/prev-horizontal.png);
+    background-image: url(../images/prev-next-buttons.png);
 }
 
 .jcarousel-skin-carolive .jcarousel-next-horizontal:hover,
-.jcarousel-skin-carolive .jcarousel-next-horizontal:focus {
-    background-position: -32px 0;
-}
-
+.jcarousel-skin-carolive .jcarousel-next-horizontal:focus,
 .jcarousel-skin-carolive .jcarousel-next-horizontal:active {
-    background-position: -64px 0;
+    background-position: -46px -47px;
 }
 
 .jcarousel-skin-carolive .jcarousel-next-disabled-horizontal,
@@ -66,32 +64,29 @@
 .jcarousel-skin-carolive .jcarousel-next-disabled-horizontal:focus,
 .jcarousel-skin-carolive .jcarousel-next-disabled-horizontal:active {
     cursor: default;
-    background-position: -96px 0;
+    background-position: -92px -47px;
 }
 
 .jcarousel-skin-carolive .jcarousel-prev-horizontal { /* Réglage de la hauteur des flèches */
     position: absolute;
     top: 75px;
     left: 5px;
-    width: 32px;
-    height: 32px;
+    width: 46px;
+    height: 47px;
     cursor: pointer;
-    background: transparent url(../images/prev-horizontal.png) no-repeat 0 0;
+    background: transparent url(../images/prev-next-buttons.png) no-repeat 0 0;
 }
 
 .jcarousel-skin-carolive .jcarousel-direction-rtl .jcarousel-prev-horizontal {
     left: auto;
     right: 5px;
-    background-image: url(../images/next-horizontal.png);
+    background-image: url(../images/prev-next-buttons.png);
 }
 
 .jcarousel-skin-carolive .jcarousel-prev-horizontal:hover, 
-.jcarousel-skin-carolive .jcarousel-prev-horizontal:focus {
-    background-position: -32px 0;
-}
-
+.jcarousel-skin-carolive .jcarousel-prev-horizontal:focus,
 .jcarousel-skin-carolive .jcarousel-prev-horizontal:active {
-    background-position: -64px 0;
+    background-position: -46px 0;
 }
 
 .jcarousel-skin-carolive .jcarousel-prev-disabled-horizontal,
@@ -99,5 +94,5 @@
 .jcarousel-skin-carolive .jcarousel-prev-disabled-horizontal:focus,
 .jcarousel-skin-carolive .jcarousel-prev-disabled-horizontal:active {
     cursor: default;
-    background-position: -96px 0;
+    background-position: -92px 0;
 }
